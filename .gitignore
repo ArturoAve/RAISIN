@@ -1,8 +1,11 @@
 *.html
-.ipynb_checkpoints
 */.ipynb_checkpoints/*
-.gitattributes
 *.pyc
+*.png
+*.eps
+
+.ipynb_checkpoints
+.gitattributes
 00_Canopy_ToRunPythonScripts.ipynb
 Scratch/
 
