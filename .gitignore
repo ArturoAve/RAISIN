@@ -1,18 +1,14 @@
+#------ python -------------
+
+*.ipynb
 *.html
-*/.ipynb_checkpoints/*
 *.pyc
-*.png
-*.eps
-
 .ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+#------- diverse ------------
+
 .gitattributes
-00_Canopy_ToRunPythonScripts.ipynb
-Scratch/
-
-.Rproj.user
-.Rapp.history
-.RData
-.Rhistory
-*.Rproj
-
 .DS_Store
+*.log
+/tmp/*
