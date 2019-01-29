@@ -99,7 +99,6 @@
 # convert Canvas_OLD_textForSnoopy_Fit.png DES16X3CRY_PlotFitText.png -evaluate-sequence mean DES16X3CRY_PlotFitText_OldLabel.png
 # convert Canvas_OLD_textForSnoopy_Fit.png DES16X3ZD_PlotFitText.png -evaluate-sequence mean DES16X3ZD_PlotFitText_OldLabel.png
 
-
 ##############################################################################80
 
 #       PS1
@@ -162,10 +161,7 @@
 # convert Canvas_OLD_textForSnoopy_Filters.png PSc560027_Filters.png  -evaluate-sequence mean  PSc560027_Filters_OldLabel.png
 # convert Canvas_OLD_textForSnoopy_Filters.png PSc560054_Filters.png  -evaluate-sequence mean  PSc560054_Filters_OldLabel.png
 
-
-
 ##############################################################################80
-
 
 #   Go back to the code directory
 

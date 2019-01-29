@@ -8,7 +8,7 @@
 # Version: 0.1.1
 #
 # For DES I use the HST names, for PS1 I use PS1 names.
-#-------------------------------------------------------------------
+#-----------------------------------------------------------------------------80
 #
 #   USE:
 #
@@ -80,7 +80,6 @@
 # mv SNooPy_PSc550027.dat  PSc550027_snoopy_tmp.dat
 # mv SNooPy_PSc560054.dat  PSc560054_snoopy_tmp.dat
 
-
 #######################################################################
 
 #       Change the first line in the snoopy files by the updated
@@ -94,7 +93,6 @@
 
 # Go to the directory where the data is located:
 cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
-
 
 # sleep 1
 
@@ -146,8 +144,6 @@ cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_1
 # sed '1s/.*/PSc550202  0.42200 	351.7999 -0.7829/'  PSc550202*tmp.dat  >  PSc550202_snoopy.dat
 # sed '1s/.*/PSc560027  0.44000 	35.8506 -3.0839/'  PSc560027*tmp.dat  >  PSc560027_snoopy.dat
 # sed '1s/.*/PSc560054  0.48157 	353.2958 -0.3364/'  PSc560054*tmp.dat  >  PSc560054_snoopy.dat
-
-
 
 #-----------------------------------------------------------------------------80
 
@@ -208,10 +204,7 @@ cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_1
 # perl -pi -w -e 's/01386047/DES16X3zd/g;' *.dat
 # perl -pi -w -e 's/Crusher/snAbell370/g;' *.dat
 
-
-#-----------------------------------------------------
-
-
+#--------------------------------------------------
 # Suffix the word "tmp" to the file names.
 
 # mv DES15C1nhv_snoopy.dat  DES15C1nhv_snoopy_tmp.dat
@@ -238,7 +231,6 @@ cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_1
 # mv DES16X3cry_snoopy.dat  DES16X3cry_snoopy_tmp.dat
 # mv DES16X3zd_snoopy.dat  DES16X3zd_snoopy_tmp.dat
 # mv snAbell370_snoopy.dat  snAbell370_snoopy_tmp.dat
-
 
 #######################################################################
 
