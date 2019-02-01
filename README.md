@@ -1,2 +1,2 @@
 # RAISIN
-Scripts to work with RAISIN to fit the data
+Scripts to work with and fit the RAISIN data
