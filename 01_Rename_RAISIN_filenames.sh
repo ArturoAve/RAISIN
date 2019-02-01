@@ -1,14 +1,13 @@
-# Rename the file names of RAISIN from David Jones or Pete Challis to my
-# name convention
-
-# Script created by: Arturo Avelino
-# On: Dec 26, 2018
-# Last update: Dec 26, 2018
-# Script name: 01_Rename_RAISIN_filenames.sh
-# Version: 0.1.1
-#
+# Rename the file names of RAISIN to a standard name convention.
 # For DES I use the HST names, for PS1 I use PS1 names.
-#-----------------------------------------------------------------------------80
+#
+#--------------------------------------------------------60
+export code_created_by='Arturo_Avelino'
+# On date: 2018.12.26 (yyyy.mm.dd)
+export last_update='2019.01.18' # (yyyy.mm.dd)
+export version_code='0.1.2'
+export code_name='01_Rename_RAISIN_filenames.sh'
+#--------------------------------------------------------60
 #
 #   USE:
 #
@@ -26,10 +25,8 @@
 
 #######################################################################
 #
-#       DES
-
 # Change David's snoopy file names to my name's convention
-
+#
 # Go to the directory where the data is located:
 # cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/DES/
 
@@ -92,7 +89,7 @@
 # the previous commands have been applied properly.
 
 # Go to the directory where the data is located:
-cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
 
 # sleep 1
 
