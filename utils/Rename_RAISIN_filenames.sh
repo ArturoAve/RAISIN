@@ -24,6 +24,10 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #   From Pete to David's name convention
 
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete
+
+
 # mv *PS1-J440005*.dat   PSc440005.dat
 # mv *PS1-J440236*.dat   PSc440236.dat
 # mv *PS1-K450082*.dat   PSc450082.dat
@@ -53,6 +57,9 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 # Change the SN name locate INSIDE of the file
 
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+#
 # perl -pi -w -e 's/PS1-J440005/PSc440005/g;' *.dat
 # perl -pi -w -e 's/PS1-J440236/PSc440236/g;' *.dat
 # perl -pi -w -e 's/PS1-K450082/PSc450082/g;' *.dat
@@ -115,6 +122,9 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 ##  Change the names from all capital letters to capital and lowercase letters
 
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+
 # mv DES15C1NHV*.dat    DES15C1nhv.dat
 # mv DES15C3ODZ*.dat    DES15C3odz.dat
 # mv DES15E2MHY*.dat    DES15E2mhy.dat
@@ -144,6 +154,10 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 # Change the SN name locate INSIDE of the file
 
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+#
+#
 # perl -pi -w -e 's/01340454/DES15C1nhv/g;' *.dat
 # perl -pi -w -e 's/01343759/DES15C3odz/g;' *.dat
 # perl -pi -w -e 's/01336008/DES15E2mhy/g;' *.dat
@@ -176,8 +190,8 @@ export code_name='Rename_RAISIN_filenames.sh'
 # Change David's snoopy file names to my name's convention
 #
 # Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/DES/
-
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+#
 # mv SNooPy_01340454.dat  DES15C1nhv_snoopy_tmp.dat
 # mv SNooPy_01343759.dat  DES15C3odz_snoopy_tmp.dat
 # mv SNooPy_01336008.dat  DES15E2mhy_snoopy_tmp.dat
@@ -202,7 +216,7 @@ export code_name='Rename_RAISIN_filenames.sh'
 # mv SNooPy_01516088.dat  DES16X3cry_snoopy_tmp.dat
 # mv SNooPy_01386047.dat  DES16X3zd_snoopy_tmp.dat
 # mv SNooPy_Crusher.dat  snAbell370_snoopy_tmp.dat
-
+#
 # mv SNooPy_PSc440005.dat  PSc440005_snoopy_tmp.dat
 # mv SNooPy_PSc440236.dat  PSc440236_snoopy_tmp.dat
 # mv SNooPy_PSc450082.dat  PSc450082_snoopy_tmp.dat
