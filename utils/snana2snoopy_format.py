@@ -15,32 +15,51 @@ import sys
 code_created_by = 'Arturo_Avelino'
 # On date: 2019.01.29 (yyyy.mm.dd)
 code_name = 'snana2snoopy_format.ipynb'
-version_code = '0.1.0'
-last_update = '2019.01.02'
+version_code = '0.1.1'
+last_update = '2019.02.05' # (yyyy.mm.dd)
 last_update_by = 'AA'  # AA, DJ, AF, GN, KM, PC, RK, etc.
 
-#-----------------------------------------------------------------------------80
+##############################################################################80
 
 # # USER
 
-Sample = 'raisin_1'
-# Sample = 'raisin_2'
+## Terminal or notebook version of this script?
+ScriptVersion = 'terminal' # ( terminal , notebook )
 
-# Consider the data with error_mag smaller than:
-ErrorMagLimit = 1
+#--------------------------------------------------------60
 
-#-------------------
-#   Directory where the SNANA files are located:
-DirSnanaFolder = '/Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2019_01_31_FromDavidJones/PS1/2_snoopy/'
+if ScriptVersion == 'terminal':
+    Sample = sys.argv[1] # Valid options: (raisin_1, raisin_2)
 
-#-------------------
+    # Consider only data with error_mag smaller than:
+    ErrorMagLimit = int(sys.argv[2]) # mag
+
+    #------------------
+    #   Directory where the SNANA files are located:
+    DirSnanaFolder = sys.argv[3]
+
+#--------------------------------------------------------60
+
+elif ScriptVersion == 'notebook':
+    Sample = 'raisin_2' # Valid options: ( raisin_1 , raisin_2 )
+
+    # Consider only data with error_mag smaller than:
+    ErrorMagLimit = 1 # mag
+
+    #------------------
+    #   Directory where the SNANA files are located:
+    DirSnanaFolder = '/Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete/'
+
+#--------------------------------------------------------60
+
 # Debug mode? If true, it will print several intermediate names.
 debug = False
 
 if Sample == 'raisin_1':
 
     # Extension of the SNANA files:
-    ExtSnana = '.snana.dat'
+    if ScriptVersion == 'terminal': ExtSnana = sys.argv[4]
+    elif ScriptVersion == 'notebook': ExtSnana = 'snana.dat'
 
     # Number of rows for the header in the SNANA file.
     # This will the number of lines that I will skip of reading in python.
@@ -56,8 +75,12 @@ if Sample == 'raisin_1':
     # If so then read the line, e.g. 'SEARCH_PEAKMJD: 56207.0', and use that MJD time
     # to discard epochs far early/late of this point.
 
-    EarlyPhasesLimit = -20 # observer days
-    LatePhasesLimit = 70 # observer days
+    if ScriptVersion == 'terminal':
+        EarlyPhasesLimit = float(sys.argv[5]) # observer days
+        LatePhasesLimit = float(sys.argv[6]) # observer days
+    elif ScriptVersion == 'notebook':
+        EarlyPhasesLimit = -20 # observer days
+        LatePhasesLimit = 70 # observer days
 
     #----------------------------
     # Line where SN name is located.
@@ -65,6 +88,8 @@ if Sample == 'raisin_1':
     LineWithName = 1
     # Column where the SN first character name starts
     NameBeginColum = 7
+    # Column of the last character
+    NameLastColum = 20
 
     # line and column of some values:
     # Note: The first line and column start with zero.
@@ -78,12 +103,13 @@ if Sample == 'raisin_1':
 elif Sample == 'raisin_2':
 
     # Extension of the SNANA files:
-    ExtSnana = '.dat'
+    if ScriptVersion == 'terminal': ExtSnana = sys.argv[4]
+    elif ScriptVersion == 'notebook': ExtSnana = '.dat'
 
     # Number of rows for the header in the Snana file
     # This will the number of lines that I will skip of reading in python.
     # Note: The first row starts with zero.
-    NumHeaderLinesSnana = 62
+    NumHeaderLinesSnana = 55
 
     # Zeropoint to convert from flux to magnitude
     # from the formula: m = -2.5*log10(flux) + 27.5
@@ -98,31 +124,34 @@ elif Sample == 'raisin_2':
     # If so then read the line, e.g. 'SEARCH_PEAKMJD: 56207.0', and use that MJD time
     # to discard epochs far early/late of this point.
 
-    EarlyPhasesLimit = -25 # observer days
-    LatePhasesLimit = 80 # observer days
-
-    #----------------------------
-    NameBeginColum = 7
+    if ScriptVersion == 'terminal':
+        EarlyPhasesLimit = float(sys.argv[5]) # observer days
+        LatePhasesLimit = float(sys.argv[6]) # observer days
+    elif ScriptVersion == 'notebook':
+        EarlyPhasesLimit = -20 # observer days
+        LatePhasesLimit = 80 # observer days
 
     #----------------------------
     # Line where SN name is located:
     # Note: The first line and column start with zero.
-    LineWithName = 7
+    LineWithName = 2
     # Column where the SN first character name starts
     NameBeginColum = 11
+    # Column of the last character
+    NameLastColum = 21
 
     # line and column of some values.
     # Note: The first line and column start with zero.
-    ra_line = 14; rac_col_begin = 11; rac_col_end = -6
-    dec_line = 15; dec_col_begin = 11; dec_col_end = -6
-    zz_line = 18; zz_col_begin = 17; zz_col_end = 23
-    tbmax_line = 20; tbmax_col_begin = 17; tbmax_col_end = -1
+    ra_line = 9; rac_col_begin = 11; rac_col_end = -6
+    dec_line = 10; dec_col_begin = 11; dec_col_end = -6
+    zz_line = 14; zz_col_begin = 16; zz_col_end = 23
+    tbmax_line = 36; tbmax_col_begin = 32; tbmax_col_end = 40
 
 ##############################################################################80
 
 # # Automatic
 #
-# This doesn't need user's interaction.
+# The rest of this script doesn't need user's interaction.
 
 # Function to convert from flux to magnitude
 
@@ -196,10 +225,12 @@ for i in range(len(listFiles_snana)): # Loop over supernovae
     for iii in range(NumHeaderLinesSnana):
         headerSnana += [snanaFile.readline()]
 
-    if debug: for lines in headerSnana: print(lines)
+    if debug:
+        for lines in headerSnana:
+            print(lines)
 
     # SN name
-    sn_name = headerSnana[LineWithName][NameBeginColum:-1]
+    sn_name = headerSnana[LineWithName][NameBeginColum:NameLastColum]
 
     RA = float(headerSnana[ra_line][rac_col_begin:rac_col_end])
     DEC = float(headerSnana[dec_line][dec_col_begin:dec_col_end])
