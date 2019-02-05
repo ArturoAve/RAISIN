@@ -5,9 +5,15 @@
 *.pyc
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+/utils/*.ipynb
+/utils/*.html
 
 00_Canopy_ToRunPythonScripts.py
 Plot_HubbleDiagram_Raisins.py
+
+#------- bash ------------
+
+*.sh
 
 #------- diverse ------------
 
