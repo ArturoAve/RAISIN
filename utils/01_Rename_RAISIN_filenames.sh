@@ -110,6 +110,36 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 # mv *1516088*.dat  DES16X3cry.dat
 # mv *1386047*.dat  DES16X3zd.dat
 
+
+#--------------------------------------------------------60
+
+##  Change the names from all capital letters to capital and lowercase letters
+
+# mv DES15C1NHV*.dat    DES15C1nhv.dat
+# mv DES15C3ODZ*.dat    DES15C3odz.dat
+# mv DES15E2MHY*.dat    DES15E2mhy.dat
+# mv DES15E2NLZ*.dat    DES15E2nlz.dat
+# mv DES15E2UC*.dat     DES15E2uc.dat
+# mv DES15X2KVT*.dat    DES15X2kvt.dat
+# mv DES15X2MEY*.dat    DES15X2mey.dat
+# mv DES15X2NKZ*.dat    DES15X2nkz.dat
+# mv DES16C1CIM*.dat    DES16C1cim.dat
+# mv DES16C2CVA*.dat    DES16C2cva.dat
+# mv DES16C3CMY*.dat    DES16C3cmy.dat
+# mv DES16E1DCX*.dat    DES16E1dcx.dat
+# mv DES16E2CLK*.dat    DES16E2clk.dat
+# mv DES16E2CQQ*.dat    DES16E2cqq.dat
+# mv DES16E2CXW*.dat    DES16E2cxw.dat
+# mv DES16E2RD*.dat     DES16E2rd.dat
+# mv DES16S1AGD*.dat    DES16S1agd.dat
+# mv DES16S1BNO*.dat    DES16S1bno.dat
+# mv DES16S2AFZ*.dat    DES16S2afz.dat
+# mv DES16X1CPF*.dat    DES16X1cpf.dat
+# mv DES16X2CRR*.dat    DES16X2crr.dat
+# mv DES16X3CRY*.dat    DES16X3cry.dat
+# mv DES16X3ZD*.dat     DES16X3zd.dat
+
+
 #--------------------------------------------------------60
 
 # Change the SN name locate INSIDE of the file
@@ -118,7 +148,7 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 # perl -pi -w -e 's/01343759/DES15C3odz/g;' *.dat
 # perl -pi -w -e 's/01336008/DES15E2mhy/g;' *.dat
 # perl -pi -w -e 's/01341370/DES15E2nlz/g;' *.dat
-# perl -pi -w -e 's/01285317/DES15E2uc/g;' *.dat
+# perl -pi -w -e 's/01285317/DES15E2uc/g;'  *.dat
 # perl -pi -w -e 's/01329615/DES15X2kvt/g;' *.dat
 # perl -pi -w -e 's/01335564/DES15X2mey/g;' *.dat
 # perl -pi -w -e 's/01339149/DES15X2nkz/g;' *.dat
@@ -129,16 +159,16 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 # perl -pi -w -e 's/01500031/DES16E2clk/g;' *.dat
 # perl -pi -w -e 's/01516019/DES16E2cqq/g;' *.dat
 # perl -pi -w -e 's/01531089/DES16E2cxw/g;' *.dat
-# perl -pi -w -e 's/01376168/DES16E2rd/g;' *.dat
+# perl -pi -w -e 's/01376168/DES16E2rd/g;'  *.dat
 # perl -pi -w -e 's/01389074/DES16S1agd/g;' *.dat
 # perl -pi -w -e 's/01430158/DES16S1bno/g;' *.dat
 # perl -pi -w -e 's/01387101/DES16S2afz/g;' *.dat
 # perl -pi -w -e 's/01501097/DES16X1cpf/g;' *.dat
 # perl -pi -w -e 's/01512114/DES16X2crr/g;' *.dat
 # perl -pi -w -e 's/01516088/DES16X3cry/g;' *.dat
-# perl -pi -w -e 's/01386047/DES16X3zd/g;' *.dat
+# perl -pi -w -e 's/01386047/DES16X3zd/g;'  *.dat
 
-# perl -pi -w -e 's/Crusher/snAbell370/g;' *.dat
+# perl -pi -w -e 's/Crusher/snAbell370/g;'  *.dat
 
 #######################################################################
 #######################################################################
@@ -200,4 +230,4 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 
 #   Go back to the code directory
 
-cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Codes/github/RAISIN/
+cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Codes/github/RAISIN/utils/
