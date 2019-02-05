@@ -86,29 +86,29 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 # Go to the directory where the data is located:
 # cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/2_z_Pete/
 #
-# mv *1340454*.dat  DES15C1nhv_snoopy.dat
-# mv *1343759*.dat  DES15C3odz_snoopy.dat
-# mv *1336008*.dat  DES15E2mhy_snoopy.dat
-# mv *1341370*.dat  DES15E2nlz_snoopy.dat
-# mv *1285317*.dat  DES15E2uc_snoopy.dat
-# mv *1329615*.dat  DES15X2kvt_snoopy.dat
-# mv *1335564*.dat  DES15X2mey_snoopy.dat
-# mv *1339149*.dat  DES15X2nkz_snoopy.dat
-# mv *1490034*.dat  DES16C1cim_snoopy.dat
-# mv *1513071*.dat  DES16C2cva_snoopy.dat
-# mv *1504139*.dat  DES16C3cmy_snoopy.dat
-# mv *1536028*.dat  DES16E1dcx_snoopy.dat
-# mv *1500031*.dat  DES16E2clk_snoopy.dat
-# mv *1516019*.dat  DES16E2cqq_snoopy.dat
-# mv *1531089*.dat  DES16E2cxw_snoopy.dat
-# mv *1376168*.dat  DES16E2rd_snoopy.dat
-# mv *1389074*.dat  DES16S1agd_snoopy.dat
-# mv *1430158*.dat  DES16S1bno_snoopy.dat
-# mv *1387101*.dat  DES16S2afz_snoopy.dat
-# mv *1501097*.dat  DES16X1cpf_snoopy.dat
-# mv *1512114*.dat  DES16X2crr_snoopy.dat
-# mv *1516088*.dat  DES16X3cry_snoopy.dat
-# mv *1386047*.dat  DES16X3zd_snoopy.dat
+# mv *1340454*.dat  DES15C1nhv.dat
+# mv *1343759*.dat  DES15C3odz.dat
+# mv *1336008*.dat  DES15E2mhy.dat
+# mv *1341370*.dat  DES15E2nlz.dat
+# mv *1285317*.dat  DES15E2uc.dat
+# mv *1329615*.dat  DES15X2kvt.dat
+# mv *1335564*.dat  DES15X2mey.dat
+# mv *1339149*.dat  DES15X2nkz.dat
+# mv *1490034*.dat  DES16C1cim.dat
+# mv *1513071*.dat  DES16C2cva.dat
+# mv *1504139*.dat  DES16C3cmy.dat
+# mv *1536028*.dat  DES16E1dcx.dat
+# mv *1500031*.dat  DES16E2clk.dat
+# mv *1516019*.dat  DES16E2cqq.dat
+# mv *1531089*.dat  DES16E2cxw.dat
+# mv *1376168*.dat  DES16E2rd.dat
+# mv *1389074*.dat  DES16S1agd.dat
+# mv *1430158*.dat  DES16S1bno.dat
+# mv *1387101*.dat  DES16S2afz.dat
+# mv *1501097*.dat  DES16X1cpf.dat
+# mv *1512114*.dat  DES16X2crr.dat
+# mv *1516088*.dat  DES16X3cry.dat
+# mv *1386047*.dat  DES16X3zd.dat
 
 #--------------------------------------------------------60
 
@@ -137,6 +137,7 @@ export code_name='01_Rename_RAISIN_filenames.sh'
 # perl -pi -w -e 's/01512114/DES16X2crr/g;' *.dat
 # perl -pi -w -e 's/01516088/DES16X3cry/g;' *.dat
 # perl -pi -w -e 's/01386047/DES16X3zd/g;' *.dat
+
 # perl -pi -w -e 's/Crusher/snAbell370/g;' *.dat
 
 #######################################################################
