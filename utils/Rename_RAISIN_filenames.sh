@@ -6,7 +6,7 @@ export code_created_by='Arturo_Avelino'
 # On date: 2018.12.26 (yyyy.mm.dd)
 export last_update='2019.02.05' # (yyyy.mm.dd)
 export version_code='0.1.3'
-export code_name='01_Rename_RAISIN_filenames.sh'
+export code_name='Rename_RAISIN_filenames.sh'
 #--------------------------------------------------------60
 #
 #   USE:

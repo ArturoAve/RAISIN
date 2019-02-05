@@ -31,8 +31,8 @@ export code_name='Update_redshifts.sh'
 #       SNANA FILES
 
 # Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
-
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2019_01_31_DavidJones/PS1/2_redshift_Pete
+#
 # sed '8s/.*/REDSHIFT_FINAL: 0.306    +- 0.0010 (CMB)/' PSc440005*.dat > PSc440005_snana_z.dat
 # sed '8s/.*/REDSHIFT_FINAL: 0.43659  +- 0.0010 (CMB)/' PSc440236*.dat > PSc440236_snana_z.dat
 # sed '8s/.*/REDSHIFT_FINAL: 0.25     +- 0.0010 (CMB)/' PSc450082*.dat > PSc450082_snana_z.dat
@@ -61,8 +61,8 @@ export code_name='Update_redshifts.sh'
 #
 # #       SNooPy FILES
 
-# Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2019_01_31_DavidJones/PS1/4_PS1_HST
 #
 # sed '1s/.*/PSc440005  0.306    52.9893  -28.8836/'  PSc440005*.dat  >  PSc440005_snoopy_z.dat
 # sed '1s/.*/PSc440236  0.43659  37.1019  -4.4246/'   PSc440236*.dat  >  PSc440236_snoopy_z.dat
@@ -95,8 +95,8 @@ export code_name='Update_redshifts.sh'
 #
 #       SNANA FILES
 #
-# Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
+## Go to the directory where the data is located:
+cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete
 
 sed '15s/.*/REDSHIFT_FINAL: 0.421   +- 0.0010 (CMB)/' DES15C1nhv*.dat > DES15C1nhv_snana_z.dat
 sed '15s/.*/REDSHIFT_FINAL: 0.508   +- 0.0010 (CMB)/' DES15C3odz*.dat > DES15C3odz_snana_z.dat
@@ -130,30 +130,30 @@ sed '15s/.*/REDSHIFT_FINAL: 0.495   +- 0.0010 (CMB)/' DES16X3zd*.dat  > DES16X3z
 ## Go to the directory where the data is located:
 # cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/data/2018_12_17/data/PS1/
 
-sed '1s/.*/DES15C1nhv  0.421   54.7539  -27.8432/' DES15C1nhv*.dat  >  DES15C1nhv_snoopy_z.dat
-sed '1s/.*/DES15C3odz  0.508   51.9790  -28.5644/' DES15C3odz*.dat  >  DES15C3odz_snoopy_z.dat
-sed '1s/.*/DES15E2mhy  0.4391  10.3212  -43.8862/' DES15E2mhy*.dat  >  DES15E2mhy_snoopy_z.dat
-sed '1s/.*/DES15E2nlz  0.41    8.9639   -44.6767/' DES15E2nlz*.dat  >  DES15E2nlz_snoopy_z.dat
-sed '1s/.*/DES15E2uc   0.566   9.4725   -43.3145/' DES15E2uc*.dat   >  DES15E2uc_snoopy_z.dat
-sed '1s/.*/DES15X2kvt  0.404   35.4427  -5.6398/'  DES15X2kvt*.dat  >  DES15X2kvt_snoopy_z.dat
-sed '1s/.*/DES15X2mey  0.608   35.1281  -6.4465/'  DES15X2mey*.dat  >  DES15X2mey_snoopy_z.dat
-sed '1s/.*/DES15X2nkz  0.469   35.5550  -5.8717/'  DES15X2nkz*.dat  >  DES15X2nkz_snoopy_z.dat
-sed '1s/.*/DES16C1cim  0.531   54.8766  -26.6491/' DES16C1cim*.dat  >  DES16C1cim_snoopy_z.dat
-sed '1s/.*/DES16C2cva  0.403   53.6834  -29.3171/' DES16C2cva*.dat  >  DES16C2cva_snoopy_z.dat
-sed '1s/.*/DES16C3cmy  0.556   51.8058  -27.4889/' DES16C3cmy*.dat  >  DES16C3cmy_snoopy_z.dat
-sed '1s/.*/DES16E1dcx  0.453   8.9685   -43.3580/' DES16E1dcx*.dat  >  DES16E1dcx_snoopy_z.dat
-sed '1s/.*/DES16E2clk  0.367   9.2035   -44.1398/' DES16E2clk*.dat  >  DES16E2clk_snoopy_z.dat
-sed '1s/.*/DES16E2cqq  0.426   9.9586   -43.5648/' DES16E2cqq*.dat  >  DES16E2cqq_snoopy_z.dat
-sed '1s/.*/DES16E2cxw  0.293   10.1779  -43.9218/' DES16E2cxw*.dat  >  DES16E2cxw_snoopy_z.dat
-sed '1s/.*/DES16E2rd   0.494   8.0888   -43.8461/' DES16E2rd*.dat   >  DES16E2rd_snoopy_z.dat
-sed '1s/.*/DES16S1agd  0.504   43.0834  -0.9112/'  DES16S1agd*.dat  >  DES16S1agd_snoopy_z.dat
-sed '1s/.*/DES16S1bno  0.47    42.5157  -0.0215/'  DES16S1bno*.dat  >  DES16S1bno_snoopy_z.dat
-sed '1s/.*/DES16S2afz  0.483   41.6012  -1.2253/'  DES16S2afz*.dat  >  DES16S2afz_snoopy_z.dat
-sed '1s/.*/DES16X1cpf  0.436   34.2062  -4.2182/'  DES16X1cpf*.dat  >  DES16X1cpf_snoopy_z.dat
-sed '1s/.*/DES16X2crr  0.312   34.9129  -6.0639/'  DES16X2crr*.dat  >  DES16X2crr_snoopy_z.dat
-sed '1s/.*/DES16X3cry  0.612   36.0439  -3.8311/'  DES16X3cry*.dat  >  DES16X3cry_snoopy_z.dat
-sed '1s/.*/DES16X3zd   0.495   36.7352  -4.4193/'  DES16X3zd*.dat   >  DES16X3zd_snoopy_z.dat
-sed '1s/.*/snAbell370  0.375   39.9689  -1.5981/'  snAbell370*.dat  >  snAbell370_snoopy_z.dat
+# sed '1s/.*/DES15C1nhv  0.421   54.7539  -27.8432/' DES15C1nhv*.dat  >  DES15C1nhv_snoopy_z.dat
+# sed '1s/.*/DES15C3odz  0.508   51.9790  -28.5644/' DES15C3odz*.dat  >  DES15C3odz_snoopy_z.dat
+# sed '1s/.*/DES15E2mhy  0.4391  10.3212  -43.8862/' DES15E2mhy*.dat  >  DES15E2mhy_snoopy_z.dat
+# sed '1s/.*/DES15E2nlz  0.41    8.9639   -44.6767/' DES15E2nlz*.dat  >  DES15E2nlz_snoopy_z.dat
+# sed '1s/.*/DES15E2uc   0.566   9.4725   -43.3145/' DES15E2uc*.dat   >  DES15E2uc_snoopy_z.dat
+# sed '1s/.*/DES15X2kvt  0.404   35.4427  -5.6398/'  DES15X2kvt*.dat  >  DES15X2kvt_snoopy_z.dat
+# sed '1s/.*/DES15X2mey  0.608   35.1281  -6.4465/'  DES15X2mey*.dat  >  DES15X2mey_snoopy_z.dat
+# sed '1s/.*/DES15X2nkz  0.469   35.5550  -5.8717/'  DES15X2nkz*.dat  >  DES15X2nkz_snoopy_z.dat
+# sed '1s/.*/DES16C1cim  0.531   54.8766  -26.6491/' DES16C1cim*.dat  >  DES16C1cim_snoopy_z.dat
+# sed '1s/.*/DES16C2cva  0.403   53.6834  -29.3171/' DES16C2cva*.dat  >  DES16C2cva_snoopy_z.dat
+# sed '1s/.*/DES16C3cmy  0.556   51.8058  -27.4889/' DES16C3cmy*.dat  >  DES16C3cmy_snoopy_z.dat
+# sed '1s/.*/DES16E1dcx  0.453   8.9685   -43.3580/' DES16E1dcx*.dat  >  DES16E1dcx_snoopy_z.dat
+# sed '1s/.*/DES16E2clk  0.367   9.2035   -44.1398/' DES16E2clk*.dat  >  DES16E2clk_snoopy_z.dat
+# sed '1s/.*/DES16E2cqq  0.426   9.9586   -43.5648/' DES16E2cqq*.dat  >  DES16E2cqq_snoopy_z.dat
+# sed '1s/.*/DES16E2cxw  0.293   10.1779  -43.9218/' DES16E2cxw*.dat  >  DES16E2cxw_snoopy_z.dat
+# sed '1s/.*/DES16E2rd   0.494   8.0888   -43.8461/' DES16E2rd*.dat   >  DES16E2rd_snoopy_z.dat
+# sed '1s/.*/DES16S1agd  0.504   43.0834  -0.9112/'  DES16S1agd*.dat  >  DES16S1agd_snoopy_z.dat
+# sed '1s/.*/DES16S1bno  0.47    42.5157  -0.0215/'  DES16S1bno*.dat  >  DES16S1bno_snoopy_z.dat
+# sed '1s/.*/DES16S2afz  0.483   41.6012  -1.2253/'  DES16S2afz*.dat  >  DES16S2afz_snoopy_z.dat
+# sed '1s/.*/DES16X1cpf  0.436   34.2062  -4.2182/'  DES16X1cpf*.dat  >  DES16X1cpf_snoopy_z.dat
+# sed '1s/.*/DES16X2crr  0.312   34.9129  -6.0639/'  DES16X2crr*.dat  >  DES16X2crr_snoopy_z.dat
+# sed '1s/.*/DES16X3cry  0.612   36.0439  -3.8311/'  DES16X3cry*.dat  >  DES16X3cry_snoopy_z.dat
+# sed '1s/.*/DES16X3zd   0.495   36.7352  -4.4193/'  DES16X3zd*.dat   >  DES16X3zd_snoopy_z.dat
+# sed '1s/.*/snAbell370  0.375   39.9689  -1.5981/'  snAbell370*.dat  >  snAbell370_snoopy_z.dat
 #
 
 #######################################################################
