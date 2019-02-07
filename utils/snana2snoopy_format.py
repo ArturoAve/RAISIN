@@ -16,7 +16,7 @@ code_created_by = 'Arturo_Avelino'
 # On date: 2019.01.29 (yyyy.mm.dd)
 code_name = 'snana2snoopy_format.ipynb'
 version_code = '0.1.1'
-last_update = '2019.02.05' # (yyyy.mm.dd)
+last_update = '2019.02.07' # (yyyy.mm.dd)
 last_update_by = 'AA'  # AA, DJ, AF, GN, KM, PC, RK, etc.
 
 ##############################################################################80
@@ -41,14 +41,14 @@ if ScriptVersion == 'terminal':
 #--------------------------------------------------------60
 
 elif ScriptVersion == 'notebook':
-    Sample = 'raisin_2' # Valid options: ( raisin_1 , raisin_2 )
+    Sample = 'raisin_1' # Valid options: ( raisin_1 , raisin_2 )
 
     # Consider only data with error_mag smaller than:
     ErrorMagLimit = 1 # mag
 
     #------------------
     #   Directory where the SNANA files are located:
-    DirSnanaFolder = '/Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete/'
+    DirSnanaFolder = '/Users/arturo/Downloads/snana/2_redshift_Pete/'
 
 #--------------------------------------------------------60
 
@@ -89,7 +89,7 @@ if Sample == 'raisin_1':
     # Column where the SN first character name starts
     NameBeginColum = 7
     # Column of the last character
-    NameLastColum = 20
+    NameLastColum = 16
 
     # line and column of some values:
     # Note: The first line and column start with zero.
