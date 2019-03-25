@@ -1,5 +1,4 @@
 # Rename the file names of RAISIN to a standard name convention.
-# For DES I use the HST names, for PS1 I use PS1 names.
 #
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
@@ -11,9 +10,10 @@ export code_name='Rename_RAISIN_filenames.sh'
 #
 #   USE:
 #
-# First, define in the perl command lines the name of the file to be modified.
-#
-# Write down the path to the folder containing the files to be
+# 1. Uncomment (i.e., remove the # symbols) of the section of this script
+# you want to use.
+# 2. Define in the command lines the name of the file to be modified.
+# 3. Write down the path to the folder containing the files to be
 # modified and then in a terminal type:
 #
 #       $ source ThisScriptFilename.sh
@@ -27,7 +27,7 @@ export code_name='Rename_RAISIN_filenames.sh'
 ## Go to the directory where the data is located:
 cd /Users/arturo/Downloads/raisin_tmp
 
-## Define the suffix to be used in the name file.
+## Define the suffix to append in the name file.
 export suffix1='_Filters'
 
 mv  PSc440005*.png  PScJ440005$suffix1.png
@@ -56,34 +56,37 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 
 #--------------------------------------------------------60
 
-#   From Pete to David's name convention
+#   From Pete to standard name convention
 
 ## Go to the directory where the data is located:
 # cd /Users/arturo/Downloads/raisin_tmp
 
-# mv *PS1-J440005*.dat   PSc440005.dat
-# mv *PS1-J440236*.dat   PSc440236.dat
-# mv *PS1-K450082*.dat   PSc450082.dat
-# mv *PS1-K450339*.dat   PSc450339.dat
-# mv *PS1-A470041*.dat   PSc470041.dat
-# mv *PS1-A470110*.dat   PSc470110.dat
-# mv *PS1-A470240*.dat   PSc470240.dat
-# mv *PS1-B480464*.dat   PSc480464.dat
-# mv *PS1-B480794*.dat   PSc480794.dat
-# mv *PS1-C490037*.dat   PSc490037.dat
-# mv *PS1-C490521*.dat   PSc490521.dat
-# mv *PS1-D500100*.dat   PSc500100.dat
-# mv *PS1-D500301*.dat   PSc500301.dat
-# mv *PS1-E510457*.dat   PSc510457.dat
-# mv *PS1-F520062*.dat   PSc520062.dat
-# mv *PS1-F520107*.dat   PSc520107.dat
-# mv *PS1-F520188*.dat   PSc520188.dat
-# mv *PS1-G530251*.dat   PSc530251.dat
-# mv *PS1-H540087*.dat   PSc540087.dat
-# mv *PS1-H540118*.dat   PSc540118.dat
-# mv *PS1-J550202*.dat   PSc550202.dat
-# mv *PS1-J560027*.dat   PSc560027.dat
-# mv *PS1-J560054*.dat   PSc560054.dat
+## Define the suffix to append in the name file.
+# export suffix1='_Filters'
+
+# mv *PS1-J440005*.dat   PScJ440005$suffix1.dat
+# mv *PS1-J440236*.dat   PScJ440236$suffix1.dat
+# mv *PS1-K450082*.dat   PScK450082$suffix1.dat
+# mv *PS1-K450339*.dat   PScK450339$suffix1.dat
+# mv *PS1-A470041*.dat   PScA470041$suffix1.dat
+# mv *PS1-A470110*.dat   PScA470110$suffix1.dat
+# mv *PS1-A470240*.dat   PScA470240$suffix1.dat
+# mv *PS1-B480464*.dat   PScB480464$suffix1.dat
+# mv *PS1-B480794*.dat   PScB480794$suffix1.dat
+# mv *PS1-C490037*.dat   PScC490037$suffix1.dat
+# mv *PS1-C490521*.dat   PScC490521$suffix1.dat
+# mv *PS1-D500100*.dat   PScD500100$suffix1.dat
+# mv *PS1-D500301*.dat   PScD500301$suffix1.dat
+# mv *PS1-E510457*.dat   PScE510457$suffix1.dat
+# mv *PS1-F520062*.dat   PScF520062$suffix1.dat
+# mv *PS1-F520107*.dat   PScF520107$suffix1.dat
+# mv *PS1-F520188*.dat   PScF520188$suffix1.dat
+# mv *PS1-G530251*.dat   PScG530251$suffix1.dat
+# mv *PS1-H540087*.dat   PScH540087$suffix1.dat
+# mv *PS1-H540118*.dat   PScH540118$suffix1.dat
+# mv *PS1-J550202*.dat   PScJ550202$suffix1.dat
+# mv *PS1-J560027*.dat   PScJ560027$suffix1.dat
+# mv *PS1-J560054*.dat   PScJ560054$suffix1.dat
 
 
 #--------------------------------------------------------60
@@ -93,29 +96,29 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 ## Go to the directory where the data is located:
 # cd /Users/arturo/Downloads/raisin_tmp
 #
-# perl -pi -w -e 's/PS1-J440005/PSc440005/g;' *.dat
-# perl -pi -w -e 's/PS1-J440236/PSc440236/g;' *.dat
-# perl -pi -w -e 's/PS1-K450082/PSc450082/g;' *.dat
-# perl -pi -w -e 's/PS1-K450339/PSc450339/g;' *.dat
-# perl -pi -w -e 's/PS1-A470041/PSc470041/g;' *.dat
-# perl -pi -w -e 's/PS1-A470110/PSc470110/g;' *.dat
-# perl -pi -w -e 's/PS1-A470240/PSc470240/g;' *.dat
-# perl -pi -w -e 's/PS1-B480464/PSc480464/g;' *.dat
-# perl -pi -w -e 's/PS1-B480794/PSc480794/g;' *.dat
-# perl -pi -w -e 's/PS1-C490037/PSc490037/g;' *.dat
-# perl -pi -w -e 's/PS1-C490521/PSc490521/g;' *.dat
-# perl -pi -w -e 's/PS1-D500100/PSc500100/g;' *.dat
-# perl -pi -w -e 's/PS1-D500301/PSc500301/g;' *.dat
-# perl -pi -w -e 's/PS1-E510457/PSc510457/g;' *.dat
-# perl -pi -w -e 's/PS1-F520062/PSc520062/g;' *.dat
-# perl -pi -w -e 's/PS1-F520107/PSc520107/g;' *.dat
-# perl -pi -w -e 's/PS1-F520188/PSc520188/g;' *.dat
-# perl -pi -w -e 's/PS1-G530251/PSc530251/g;' *.dat
-# perl -pi -w -e 's/PS1-H540087/PSc540087/g;' *.dat
-# perl -pi -w -e 's/PS1-H540118/PSc540118/g;' *.dat
-# perl -pi -w -e 's/PS1-J550202/PSc550202/g;' *.dat
-# perl -pi -w -e 's/PS1-J560027/PSc560027/g;' *.dat
-# perl -pi -w -e 's/PS1-J560054/PSc560054/g;' *.dat
+# perl -pi -w -e 's/PS1-J440005/PScJ440005/g;' *.dat
+# perl -pi -w -e 's/PS1-J440236/PScJ440236/g;' *.dat
+# perl -pi -w -e 's/PS1-K450082/PScK450082/g;' *.dat
+# perl -pi -w -e 's/PS1-K450339/PScK450339/g;' *.dat
+# perl -pi -w -e 's/PS1-A470041/PScA470041/g;' *.dat
+# perl -pi -w -e 's/PS1-A470110/PScA470110/g;' *.dat
+# perl -pi -w -e 's/PS1-A470240/PScA470240/g;' *.dat
+# perl -pi -w -e 's/PS1-B480464/PScB480464/g;' *.dat
+# perl -pi -w -e 's/PS1-B480794/PScB480794/g;' *.dat
+# perl -pi -w -e 's/PS1-C490037/PScC490037/g;' *.dat
+# perl -pi -w -e 's/PS1-C490521/PScC490521/g;' *.dat
+# perl -pi -w -e 's/PS1-D500100/PScD500100/g;' *.dat
+# perl -pi -w -e 's/PS1-D500301/PScD500301/g;' *.dat
+# perl -pi -w -e 's/PS1-E510457/PScE510457/g;' *.dat
+# perl -pi -w -e 's/PS1-F520062/PScF520062/g;' *.dat
+# perl -pi -w -e 's/PS1-F520107/PScF520107/g;' *.dat
+# perl -pi -w -e 's/PS1-F520188/PScF520188/g;' *.dat
+# perl -pi -w -e 's/PS1-G530251/PScG530251/g;' *.dat
+# perl -pi -w -e 's/PS1-H540087/PScH540087/g;' *.dat
+# perl -pi -w -e 's/PS1-H540118/PScH540118/g;' *.dat
+# perl -pi -w -e 's/PS1-J550202/PScJ550202/g;' *.dat
+# perl -pi -w -e 's/PS1-J560027/PScJ560027/g;' *.dat
+# perl -pi -w -e 's/PS1-J560054/PScJ560054/g;' *.dat
 
 #######################################################################
 
@@ -215,67 +218,46 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 # perl -pi -w -e 's/01516088/DES16X3cry/g;' *.dat
 # perl -pi -w -e 's/01386047/DES16X3zd/g;'  *.dat
 
-# perl -pi -w -e 's/Crusher/snAbell370/g;'  *.dat
+# perl -pi -w -e 's/Crusher/SNABELL370/g;'  *.dat
 
 #######################################################################
 #######################################################################
 #
-#   DIVERSE STUFFS
+#           DIVERSE STUFFS
 #
 # Change David's snoopy file names to my name's convention
 #
 # Go to the directory where the data is located:
 # cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
 #
-# mv SNooPy_01340454.dat  DES15C1nhv_snoopy_tmp.dat
-# mv SNooPy_01343759.dat  DES15C3odz_snoopy_tmp.dat
-# mv SNooPy_01336008.dat  DES15E2mhy_snoopy_tmp.dat
-# mv SNooPy_01341370.dat  DES15E2nlz_snoopy_tmp.dat
-# mv SNooPy_01285317.dat  DES15E2uc_snoopy_tmp.dat
-# mv SNooPy_01329615.dat  DES15X2kvt_snoopy_tmp.dat
-# mv SNooPy_01335564.dat  DES15X2mey_snoopy_tmp.dat
-# mv SNooPy_01339149.dat  DES15X2nkz_snoopy_tmp.dat
-# mv SNooPy_01490034.dat  DES16C1cim_snoopy_tmp.dat
-# mv SNooPy_01513071.dat  DES16C2cva_snoopy_tmp.dat
-# mv SNooPy_01504139.dat  DES16C3cmy_snoopy_tmp.dat
-# mv SNooPy_01536028.dat  DES16E1dcx_snoopy_tmp.dat
-# mv SNooPy_01500031.dat  DES16E2clk_snoopy_tmp.dat
-# mv SNooPy_01516019.dat  DES16E2cqq_snoopy_tmp.dat
-# mv SNooPy_01531089.dat  DES16E2cxw_snoopy_tmp.dat
-# mv SNooPy_01376168.dat  DES16E2rd_snoopy_tmp.dat
-# mv SNooPy_01389074.dat  DES16S1agd_snoopy_tmp.dat
-# mv SNooPy_01430158.dat  DES16S1bno_snoopy_tmp.dat
-# mv SNooPy_01387101.dat  DES16S2afz_snoopy_tmp.dat
-# mv SNooPy_01501097.dat  DES16X1cpf_snoopy_tmp.dat
-# mv SNooPy_01512114.dat  DES16X2crr_snoopy_tmp.dat
-# mv SNooPy_01516088.dat  DES16X3cry_snoopy_tmp.dat
-# mv SNooPy_01386047.dat  DES16X3zd_snoopy_tmp.dat
-# mv SNooPy_Crusher.dat  snAbell370_snoopy_tmp.dat
-#
-# mv SNooPy_PSc440005.dat  PSc440005_snoopy_tmp.dat
-# mv SNooPy_PSc440236.dat  PSc440236_snoopy_tmp.dat
-# mv SNooPy_PSc450082.dat  PSc450082_snoopy_tmp.dat
-# mv SNooPy_PSc450339.dat  PSc450339_snoopy_tmp.dat
-# mv SNooPy_PSc470110.dat  PSc470110_snoopy_tmp.dat
-# mv SNooPy_PSc470240.dat  PSc470240_snoopy_tmp.dat
-# mv SNooPy_PSc480464.dat  PSc480464_snoopy_tmp.dat
-# mv SNooPy_PSc480794.dat  PSc480794_snoopy_tmp.dat
-# mv SNooPy_PSc490037.dat  PSc490037_snoopy_tmp.dat
-# mv SNooPy_PSc490521.dat  PSc490521_snoopy_tmp.dat
-# mv SNooPy_PSc500100.dat  PSc500100_snoopy_tmp.dat
-# mv SNooPy_PSc500301.dat  PSc500301_snoopy_tmp.dat
-# mv SNooPy_PSc510457.dat  PSc510457_snoopy_tmp.dat
-# mv SNooPy_PSc520062.dat  PSc520062_snoopy_tmp.dat
-# mv SNooPy_PSc520107.dat  PSc520107_snoopy_tmp.dat
-# mv SNooPy_PSc520188.dat  PSc520188_snoopy_tmp.dat
-# mv SNooPy_PSc530251.dat  PSc530251_snoopy_tmp.dat
-# mv SNooPy_PSc540087.dat  PSc540087_snoopy_tmp.dat
-# mv SNooPy_PSc540118.dat  PSc540118_snoopy_tmp.dat
-# mv SNooPy_PSc550027.dat  PSc550027_snoopy_tmp.dat
-# mv SNooPy_PSc560054.dat  PSc560054_snoopy_tmp.dat
-
+# mv SNooPy_01340454.dat  DES15C1nhv_snoopy.dat
+# mv SNooPy_01343759.dat  DES15C3odz_snoopy.dat
+# mv SNooPy_01336008.dat  DES15E2mhy_snoopy.dat
+# mv SNooPy_01341370.dat  DES15E2nlz_snoopy.dat
+# mv SNooPy_01285317.dat  DES15E2uc_snoopy.dat
+# mv SNooPy_01329615.dat  DES15X2kvt_snoopy.dat
+# mv SNooPy_01335564.dat  DES15X2mey_snoopy.dat
+# mv SNooPy_01339149.dat  DES15X2nkz_snoopy.dat
+# mv SNooPy_01490034.dat  DES16C1cim_snoopy.dat
+# mv SNooPy_01513071.dat  DES16C2cva_snoopy.dat
+# mv SNooPy_01504139.dat  DES16C3cmy_snoopy.dat
+# mv SNooPy_01536028.dat  DES16E1dcx_snoopy.dat
+# mv SNooPy_01500031.dat  DES16E2clk_snoopy.dat
+# mv SNooPy_01516019.dat  DES16E2cqq_snoopy.dat
+# mv SNooPy_01531089.dat  DES16E2cxw_snoopy.dat
+# mv SNooPy_01376168.dat  DES16E2rd_snoopy.dat
+# mv SNooPy_01389074.dat  DES16S1agd_snoopy.dat
+# mv SNooPy_01430158.dat  DES16S1bno_snoopy.dat
+# mv SNooPy_01387101.dat  DES16S2afz_snoopy.dat
+# mv SNooPy_01501097.dat  DES16X1cpf_snoopy.dat
+# mv SNooPy_01512114.dat  DES16X2crr_snoopy.dat
+# mv SNooPy_01516088.dat  DES16X3cry_snoopy.dat
+# mv SNooPy_01386047.dat  DES16X3zd_snoopy.dat
+# mv SNooPy_Crusher.dat   SNABELL370_snoopy.dat
 
 #######################################################################
+#######################################################################
+
 
 #   Go back to the code directory
 
