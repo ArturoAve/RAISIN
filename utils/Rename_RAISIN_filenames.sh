@@ -13,7 +13,8 @@ export code_name='Rename_RAISIN_filenames.sh'
 # 1. Uncomment (i.e., remove the # symbols) of the section of this script
 # you want to use.
 # 2. Define in the command lines the name of the file to be modified.
-# 3. Write down the path to the folder containing the files to be
+# 3. At the bottom of this script, write down the location of this script.
+# 4. Write down the path to the folder containing the files to be
 # modified and then in a terminal type:
 #
 #       $ source ThisScriptFilename.sh
