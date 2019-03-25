@@ -21,7 +21,7 @@ export code_name='Rename_RAISIN_filenames.sh'
 #
 #######################################################################
 
-#           PanSTARRS
+#           PanSTARRS (RAISIN-1)
 
 #   From David to Pete's name convention
 
@@ -123,7 +123,7 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 
 #######################################################################
 
-#           DES
+#           DES (RAISIN-2)
 
 #  From DES to Pete's name convention.
 
@@ -226,7 +226,7 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 #
 #           DIVERSE STUFFS
 #
-# Change David's snoopy file names to my name's convention
+# Change David's snoopy file names to the name's convention
 #
 # Go to the directory where the data is located:
 # cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
