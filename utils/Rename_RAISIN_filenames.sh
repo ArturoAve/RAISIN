@@ -4,8 +4,8 @@
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
 # On date: 2018.12.26 (yyyy.mm.dd)
-export last_update='2019.02.05' # (yyyy.mm.dd)
-export version_code='0.1.3'
+export last_update='2019.03.24' # (yyyy.mm.dd)
+export version_code='0.1.4'
 export code_name='Rename_RAISIN_filenames.sh'
 #--------------------------------------------------------60
 #
@@ -22,11 +22,44 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #           PanSTARRS
 
+#   From David to Pete's name convention
+
+## Go to the directory where the data is located:
+cd /Users/arturo/Downloads/raisin_tmp
+
+## Define the suffix to be used in the name file.
+export suffix1='_Filters'
+
+mv  PSc440005*.png  PScJ440005$suffix1.png
+mv  PSc440236*.png  PScJ440236$suffix1.png
+mv  PSc450082*.png  PScK450082$suffix1.png
+mv  PSc450339*.png  PScK450339$suffix1.png
+mv  PSc470041*.png  PScA470041$suffix1.png
+mv  PSc470110*.png  PScA470110$suffix1.png
+mv  PSc470240*.png  PScA470240$suffix1.png
+mv  PSc480464*.png  PScB480464$suffix1.png
+mv  PSc480794*.png  PScB480794$suffix1.png
+mv  PSc490037*.png  PScC490037$suffix1.png
+mv  PSc490521*.png  PScC490521$suffix1.png
+mv  PSc500100*.png  PScD500100$suffix1.png
+mv  PSc500301*.png  PScD500301$suffix1.png
+mv  PSc510457*.png  PScE510457$suffix1.png
+mv  PSc520062*.png  PScF520062$suffix1.png
+mv  PSc520107*.png  PScF520107$suffix1.png
+mv  PSc520188*.png  PScF520188$suffix1.png
+mv  PSc530251*.png  PScG530251$suffix1.png
+mv  PSc540087*.png  PScH540087$suffix1.png
+mv  PSc540118*.png  PScH540118$suffix1.png
+mv  PSc550202*.png  PScJ550202$suffix1.png
+mv  PSc560027*.png  PScJ560027$suffix1.png
+mv  PSc560054*.png  PScJ560054$suffix1.png
+
+#--------------------------------------------------------60
+
 #   From Pete to David's name convention
 
 ## Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete
-
+# cd /Users/arturo/Downloads/raisin_tmp
 
 # mv *PS1-J440005*.dat   PSc440005.dat
 # mv *PS1-J440236*.dat   PSc440236.dat
@@ -55,10 +88,10 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #--------------------------------------------------------60
 
-# Change the SN name locate INSIDE of the file
+# Change the SN name located INSIDE of the data file.
 
 ## Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+# cd /Users/arturo/Downloads/raisin_tmp
 #
 # perl -pi -w -e 's/PS1-J440005/PSc440005/g;' *.dat
 # perl -pi -w -e 's/PS1-J440236/PSc440236/g;' *.dat
@@ -91,7 +124,7 @@ export code_name='Rename_RAISIN_filenames.sh'
 #  From DES to Pete's name convention.
 
 # Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/2_z_Pete/
+# cd /Users/arturo/Downloads/raisin_tmp
 #
 # mv *1340454*.dat  DES15C1nhv.dat
 # mv *1343759*.dat  DES15C3odz.dat
@@ -123,7 +156,7 @@ export code_name='Rename_RAISIN_filenames.sh'
 ##  Change the names from all capital letters to capital and lowercase letters
 
 ## Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+# cd /Users/arturo/Downloads/raisin_tmp
 
 # mv DES15C1NHV*.dat    DES15C1nhv.dat
 # mv DES15C3ODZ*.dat    DES15C3odz.dat
@@ -152,10 +185,10 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #--------------------------------------------------------60
 
-# Change the SN name locate INSIDE of the file
+# Change the SN name locates INSIDE of the file
 
 ## Go to the directory where the data is located:
-# cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/raisin12/2018_12_17_DavidJones/2_converted_names
+# cd /Users/arturo/Downloads/raisin_tmp
 #
 #
 # perl -pi -w -e 's/01340454/DES15C1nhv/g;' *.dat
@@ -186,6 +219,8 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #######################################################################
 #######################################################################
+#
+#   DIVERSE STUFFS
 #
 # Change David's snoopy file names to my name's convention
 #
