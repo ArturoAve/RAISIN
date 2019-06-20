@@ -44,7 +44,7 @@ def snpyfit(sn_filename, bands_to_fit=[], obs_rest_bands=[],
     # Supernova name to use to save the output files:
     snname_save = sn_filename[:num_char_trim]
 
-    if debug: print('#- %s LC data:uploaded.'%sn_filename[:12])
+    if debug: print('#- %s LC data: uploaded.'%sn_filename[:12])
 
     # Define the restframe bands if indicated to do so for some
     # particular observer frame bands:
@@ -55,11 +55,12 @@ def snpyfit(sn_filename, bands_to_fit=[], obs_rest_bands=[],
     #-------------------------------------
     #             FITTING
 
+    BandsToFit = []; # reset
+
     # Fit the data based on the filters indicated:
     if len(bands_to_fit) > 0:
 
         # Creation of a list with the specific band names to fit for this SN:
-        BandsToFit = [];
         for band in s.data.keys():
             if band in bands_to_fit: BandsToFit += [band]
 
@@ -71,6 +72,9 @@ def snpyfit(sn_filename, bands_to_fit=[], obs_rest_bands=[],
     else:
         s.fit(dokcorr=apply_kcorr, k_stretch=apply_stretch,
           reset_kcorrs=True, **args)
+
+        BandsToFit = s.data.keys()
+
 
     if debug: print('#- Fit: done.')
 
@@ -158,6 +162,8 @@ def snpyfit(sn_filename, bands_to_fit=[], obs_rest_bands=[],
     text_script = '# Script used: %s (version %s | last update: %s)\n'%(
         code_name, code_version, last_update)
 
+    if debug: print('#- Time, date, author, script: defined.')
+
     # Append data to the summary file:
     textfile_1 = open(dir_save_output+snname_save+'_SummaryFit_.txt','a')
     textfile_1.write(text_line)
@@ -179,8 +185,8 @@ def snpyfit(sn_filename, bands_to_fit=[], obs_rest_bands=[],
 
     #-------------------------------------
 
-    print_output = "\n# %s fitted with no issues.\n"%snname_save
+    print('\n#- %s fitted with no issues.\n'%snname_save)
 
-    return print_output
+    return '#---- %s done ----'%snname_save
 
 #-----------------------------------------------------------------------------80
