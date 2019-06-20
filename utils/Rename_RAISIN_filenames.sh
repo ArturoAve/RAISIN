@@ -23,37 +23,40 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #           PanSTARRS (RAISIN-1)
 
-#   From David to Pete's name convention
+#       From David to standard name convention
 
-## Go to the directory where the data is located:
-# cd /Users/arturo/Downloads/raisin_tmp
+# Go to the directory where the data is located:
+# cd /Users/arturo/Downloads/tmp/raisin/raisin1
+#
+# ## The suffix of the kind of file:
+# export suffix1='_snoopy.dat'
 #
 # ## Define the suffix to append in the name file.
-# export suffix1='_Filters'
+# export suffix2='_snoopy.dat'
 #
-# mv  PSc440005*.png  PScJ440005$suffix1.png
-# mv  PSc440236*.png  PScJ440236$suffix1.png
-# mv  PSc450082*.png  PScK450082$suffix1.png
-# mv  PSc450339*.png  PScK450339$suffix1.png
-# mv  PSc470041*.png  PScA470041$suffix1.png
-# mv  PSc470110*.png  PScA470110$suffix1.png
-# mv  PSc470240*.png  PScA470240$suffix1.png
-# mv  PSc480464*.png  PScB480464$suffix1.png
-# mv  PSc480794*.png  PScB480794$suffix1.png
-# mv  PSc490037*.png  PScC490037$suffix1.png
-# mv  PSc490521*.png  PScC490521$suffix1.png
-# mv  PSc500100*.png  PScD500100$suffix1.png
-# mv  PSc500301*.png  PScD500301$suffix1.png
-# mv  PSc510457*.png  PScE510457$suffix1.png
-# mv  PSc520062*.png  PScF520062$suffix1.png
-# mv  PSc520107*.png  PScF520107$suffix1.png
-# mv  PSc520188*.png  PScF520188$suffix1.png
-# mv  PSc530251*.png  PScG530251$suffix1.png
-# mv  PSc540087*.png  PScH540087$suffix1.png
-# mv  PSc540118*.png  PScH540118$suffix1.png
-# mv  PSc550202*.png  PScJ550202$suffix1.png
-# mv  PSc560027*.png  PScJ560027$suffix1.png
-# mv  PSc560054*.png  PScJ560054$suffix1.png
+# mv  PSc440005$suffix1  PScJ440005$suffix2
+# mv  PSc440236$suffix1  PScJ440236$suffix2
+# mv  PSc450082$suffix1  PScK450082$suffix2
+# mv  PSc450339$suffix1  PScK450339$suffix2
+# mv  PSc470041$suffix1  PScA470041$suffix2
+# mv  PSc470110$suffix1  PScA470110$suffix2
+# mv  PSc470240$suffix1  PScA470240$suffix2
+# mv  PSc480464$suffix1  PScB480464$suffix2
+# mv  PSc480794$suffix1  PScB480794$suffix2
+# mv  PSc490037$suffix1  PScC490037$suffix2
+# mv  PSc490521$suffix1  PScC490521$suffix2
+# mv  PSc500100$suffix1  PScD500100$suffix2
+# mv  PSc500301$suffix1  PScD500301$suffix2
+# mv  PSc510457$suffix1  PScE510457$suffix2
+# mv  PSc520062$suffix1  PScF520062$suffix2
+# mv  PSc520107$suffix1  PScF520107$suffix2
+# mv  PSc520188$suffix1  PScF520188$suffix2
+# mv  PSc530251$suffix1  PScG530251$suffix2
+# mv  PSc540087$suffix1  PScH540087$suffix2
+# mv  PSc540118$suffix1  PScH540118$suffix2
+# mv  PSc550202$suffix1  PScJ550202$suffix2
+# mv  PSc560027$suffix1  PScJ560027$suffix2
+# mv  PSc560054$suffix1  PScJ560054$suffix2
 
 #--------------------------------------------------------60
 
@@ -89,8 +92,40 @@ export code_name='Rename_RAISIN_filenames.sh'
 # mv *PS1-J560027*.dat   PScJ560027$suffix1.dat
 # mv *PS1-J560054*.dat   PScJ560054$suffix1.dat
 
+#--------------------------------------------------------60
+#       From Pete to standard name convention
+
+# Change the SN name located INSIDE of the data file.
+
+## Go to the directory where the data is located:
+cd /Users/arturo/Downloads/tmp/raisin/raisin1
+
+perl -pi -w -e 's/PSc440005/PScJ440005/g;' *.dat
+perl -pi -w -e 's/PSc440236/PScJ440236/g;' *.dat
+perl -pi -w -e 's/PSc450082/PScK450082/g;' *.dat
+perl -pi -w -e 's/PSc450339/PScK450339/g;' *.dat
+perl -pi -w -e 's/PSc470041/PScA470041/g;' *.dat
+perl -pi -w -e 's/PSc470110/PScA470110/g;' *.dat
+perl -pi -w -e 's/PSc470240/PScA470240/g;' *.dat
+perl -pi -w -e 's/PSc480464/PScB480464/g;' *.dat
+perl -pi -w -e 's/PSc480794/PScB480794/g;' *.dat
+perl -pi -w -e 's/PSc490037/PScC490037/g;' *.dat
+perl -pi -w -e 's/PSc490521/PScC490521/g;' *.dat
+perl -pi -w -e 's/PSc500100/PScD500100/g;' *.dat
+perl -pi -w -e 's/PSc500301/PScD500301/g;' *.dat
+perl -pi -w -e 's/PSc510457/PScE510457/g;' *.dat
+perl -pi -w -e 's/PSc520062/PScF520062/g;' *.dat
+perl -pi -w -e 's/PSc520107/PScF520107/g;' *.dat
+perl -pi -w -e 's/PSc520188/PScF520188/g;' *.dat
+perl -pi -w -e 's/PSc530251/PScG530251/g;' *.dat
+perl -pi -w -e 's/PSc540087/PScH540087/g;' *.dat
+perl -pi -w -e 's/PSc540118/PScH540118/g;' *.dat
+perl -pi -w -e 's/PSc550202/PScJ550202/g;' *.dat
+perl -pi -w -e 's/PSc560027/PScJ560027/g;' *.dat
+perl -pi -w -e 's/PSc560054/PScJ560054/g;' *.dat
 
 #--------------------------------------------------------60
+#       From Pete to standard name convention
 
 # Change the SN name located INSIDE of the data file.
 
@@ -229,37 +264,37 @@ export code_name='Rename_RAISIN_filenames.sh'
 # Redshift taken from my official Google spreadsheet file.
 
 # Go to the directory where the data is located:
-cd /Users/arturo/Downloads/tmp/raisin
-
-## The suffix of the kind of file:
-export suffix1='_PlotKcorrs.png'
-
-## Define the suffix to append in the name file.
-export suffix2='_PlotKcorrs.png'
-
-mv DES15C1nhv$suffix1      0.421_DES15C1nhv$suffix2
-mv DES15C3odz$suffix1      0.508_DES15C3odz$suffix2
-mv DES15E2mhy$suffix1      0.439_DES15E2mhy$suffix2
-mv DES15E2nlz$suffix1      0.410_DES15E2nlz$suffix2
-mv DES15E2uc$suffix1       0.566_DES15E2uc$suffix2
-mv DES15X2kvt$suffix1      0.404_DES15X2kvt$suffix2
-mv DES15X2mey$suffix1      0.608_DES15X2mey$suffix2
-mv DES15X2nkz$suffix1      0.469_DES15X2nkz$suffix2
-mv DES16C1cim$suffix1      0.531_DES16C1cim$suffix2
-mv DES16C2cva$suffix1      0.403_DES16C2cva$suffix2
-mv DES16C3cmy$suffix1      0.556_DES16C3cmy$suffix2
-mv DES16E1dcx$suffix1      0.453_DES16E1dcx$suffix2
-mv DES16E2clk$suffix1      0.367_DES16E2clk$suffix2
-mv DES16E2cqq$suffix1      0.426_DES16E2cqq$suffix2
-mv DES16E2cxw$suffix1      0.293_DES16E2cxw$suffix2
-mv DES16E2rd$suffix1       0.494_DES16E2rd$suffix2
-mv DES16S1agd$suffix1      0.504_DES16S1agd$suffix2
-mv DES16S1bno$suffix1      0.470_DES16S1bno$suffix2
-mv DES16S2afz$suffix1      0.483_DES16S2afz$suffix2
-mv DES16X1cpf$suffix1      0.436_DES16X1cpf$suffix2
-mv DES16X2crr$suffix1      0.312_DES16X2crr$suffix2
-mv DES16X3cry$suffix1      0.612_DES16X3cry$suffix2
-mv DES16X3zd$suffix1       0.495_DES16X3zd$suffix2
+# cd /Users/arturo/Downloads/tmp/raisin
+#
+# ## The suffix of the kind of file:
+# export suffix1='_PlotKcorrs.png'
+#
+# ## Define the suffix to append in the name file.
+# export suffix2='_PlotKcorrs.png'
+#
+# mv DES15C1nhv$suffix1      0.421_DES15C1nhv$suffix2
+# mv DES15C3odz$suffix1      0.508_DES15C3odz$suffix2
+# mv DES15E2mhy$suffix1      0.439_DES15E2mhy$suffix2
+# mv DES15E2nlz$suffix1      0.410_DES15E2nlz$suffix2
+# mv DES15E2uc$suffix1       0.566_DES15E2uc$suffix2
+# mv DES15X2kvt$suffix1      0.404_DES15X2kvt$suffix2
+# mv DES15X2mey$suffix1      0.608_DES15X2mey$suffix2
+# mv DES15X2nkz$suffix1      0.469_DES15X2nkz$suffix2
+# mv DES16C1cim$suffix1      0.531_DES16C1cim$suffix2
+# mv DES16C2cva$suffix1      0.403_DES16C2cva$suffix2
+# mv DES16C3cmy$suffix1      0.556_DES16C3cmy$suffix2
+# mv DES16E1dcx$suffix1      0.453_DES16E1dcx$suffix2
+# mv DES16E2clk$suffix1      0.367_DES16E2clk$suffix2
+# mv DES16E2cqq$suffix1      0.426_DES16E2cqq$suffix2
+# mv DES16E2cxw$suffix1      0.293_DES16E2cxw$suffix2
+# mv DES16E2rd$suffix1       0.494_DES16E2rd$suffix2
+# mv DES16S1agd$suffix1      0.504_DES16S1agd$suffix2
+# mv DES16S1bno$suffix1      0.470_DES16S1bno$suffix2
+# mv DES16S2afz$suffix1      0.483_DES16S2afz$suffix2
+# mv DES16X1cpf$suffix1      0.436_DES16X1cpf$suffix2
+# mv DES16X2crr$suffix1      0.312_DES16X2crr$suffix2
+# mv DES16X3cry$suffix1      0.612_DES16X3cry$suffix2
+# mv DES16X3zd$suffix1       0.495_DES16X3zd$suffix2
 
 
 
