@@ -3,8 +3,8 @@
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
 # On date: 2018.12.26 (yyyy.mm.dd)
-export last_update='2019.03.24' # (yyyy.mm.dd)
-export version_code='0.1.4'
+export last_update='2019.06.12' # (yyyy.mm.dd)
+export version_code='0.1.5'
 export code_name='Rename_RAISIN_filenames.sh'
 #--------------------------------------------------------60
 #
@@ -26,34 +26,34 @@ export code_name='Rename_RAISIN_filenames.sh'
 #   From David to Pete's name convention
 
 ## Go to the directory where the data is located:
-cd /Users/arturo/Downloads/raisin_tmp
-
-## Define the suffix to append in the name file.
-export suffix1='_Filters'
-
-mv  PSc440005*.png  PScJ440005$suffix1.png
-mv  PSc440236*.png  PScJ440236$suffix1.png
-mv  PSc450082*.png  PScK450082$suffix1.png
-mv  PSc450339*.png  PScK450339$suffix1.png
-mv  PSc470041*.png  PScA470041$suffix1.png
-mv  PSc470110*.png  PScA470110$suffix1.png
-mv  PSc470240*.png  PScA470240$suffix1.png
-mv  PSc480464*.png  PScB480464$suffix1.png
-mv  PSc480794*.png  PScB480794$suffix1.png
-mv  PSc490037*.png  PScC490037$suffix1.png
-mv  PSc490521*.png  PScC490521$suffix1.png
-mv  PSc500100*.png  PScD500100$suffix1.png
-mv  PSc500301*.png  PScD500301$suffix1.png
-mv  PSc510457*.png  PScE510457$suffix1.png
-mv  PSc520062*.png  PScF520062$suffix1.png
-mv  PSc520107*.png  PScF520107$suffix1.png
-mv  PSc520188*.png  PScF520188$suffix1.png
-mv  PSc530251*.png  PScG530251$suffix1.png
-mv  PSc540087*.png  PScH540087$suffix1.png
-mv  PSc540118*.png  PScH540118$suffix1.png
-mv  PSc550202*.png  PScJ550202$suffix1.png
-mv  PSc560027*.png  PScJ560027$suffix1.png
-mv  PSc560054*.png  PScJ560054$suffix1.png
+# cd /Users/arturo/Downloads/raisin_tmp
+#
+# ## Define the suffix to append in the name file.
+# export suffix1='_Filters'
+#
+# mv  PSc440005*.png  PScJ440005$suffix1.png
+# mv  PSc440236*.png  PScJ440236$suffix1.png
+# mv  PSc450082*.png  PScK450082$suffix1.png
+# mv  PSc450339*.png  PScK450339$suffix1.png
+# mv  PSc470041*.png  PScA470041$suffix1.png
+# mv  PSc470110*.png  PScA470110$suffix1.png
+# mv  PSc470240*.png  PScA470240$suffix1.png
+# mv  PSc480464*.png  PScB480464$suffix1.png
+# mv  PSc480794*.png  PScB480794$suffix1.png
+# mv  PSc490037*.png  PScC490037$suffix1.png
+# mv  PSc490521*.png  PScC490521$suffix1.png
+# mv  PSc500100*.png  PScD500100$suffix1.png
+# mv  PSc500301*.png  PScD500301$suffix1.png
+# mv  PSc510457*.png  PScE510457$suffix1.png
+# mv  PSc520062*.png  PScF520062$suffix1.png
+# mv  PSc520107*.png  PScF520107$suffix1.png
+# mv  PSc520188*.png  PScF520188$suffix1.png
+# mv  PSc530251*.png  PScG530251$suffix1.png
+# mv  PSc540087*.png  PScH540087$suffix1.png
+# mv  PSc540118*.png  PScH540118$suffix1.png
+# mv  PSc550202*.png  PScJ550202$suffix1.png
+# mv  PSc560027*.png  PScJ560027$suffix1.png
+# mv  PSc560054*.png  PScJ560054$suffix1.png
 
 #--------------------------------------------------------60
 
@@ -186,7 +186,6 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 # mv DES16X3CRY*.dat    DES16X3cry.dat
 # mv DES16X3ZD*.dat     DES16X3zd.dat
 
-
 #--------------------------------------------------------60
 
 # Change the SN name locates INSIDE of the file
@@ -220,6 +219,49 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 # perl -pi -w -e 's/01386047/DES16X3zd/g;'  *.dat
 
 # perl -pi -w -e 's/Crusher/SNABELL370/g;'  *.dat
+
+
+#--------------------------------------------------------60
+
+#     Change the name by appending the redshift value of the supernova
+
+# This is useful to sort the plots in Evernote based on redshift.
+# Redshift taken from my official Google spreadsheet file.
+
+# Go to the directory where the data is located:
+cd /Users/arturo/Downloads/tmp/raisin
+
+## The suffix of the kind of file:
+export suffix1='_PlotKcorrs.png'
+
+## Define the suffix to append in the name file.
+export suffix2='_PlotKcorrs.png'
+
+mv DES15C1nhv$suffix1      0.421_DES15C1nhv$suffix2
+mv DES15C3odz$suffix1      0.508_DES15C3odz$suffix2
+mv DES15E2mhy$suffix1      0.439_DES15E2mhy$suffix2
+mv DES15E2nlz$suffix1      0.410_DES15E2nlz$suffix2
+mv DES15E2uc$suffix1       0.566_DES15E2uc$suffix2
+mv DES15X2kvt$suffix1      0.404_DES15X2kvt$suffix2
+mv DES15X2mey$suffix1      0.608_DES15X2mey$suffix2
+mv DES15X2nkz$suffix1      0.469_DES15X2nkz$suffix2
+mv DES16C1cim$suffix1      0.531_DES16C1cim$suffix2
+mv DES16C2cva$suffix1      0.403_DES16C2cva$suffix2
+mv DES16C3cmy$suffix1      0.556_DES16C3cmy$suffix2
+mv DES16E1dcx$suffix1      0.453_DES16E1dcx$suffix2
+mv DES16E2clk$suffix1      0.367_DES16E2clk$suffix2
+mv DES16E2cqq$suffix1      0.426_DES16E2cqq$suffix2
+mv DES16E2cxw$suffix1      0.293_DES16E2cxw$suffix2
+mv DES16E2rd$suffix1       0.494_DES16E2rd$suffix2
+mv DES16S1agd$suffix1      0.504_DES16S1agd$suffix2
+mv DES16S1bno$suffix1      0.470_DES16S1bno$suffix2
+mv DES16S2afz$suffix1      0.483_DES16S2afz$suffix2
+mv DES16X1cpf$suffix1      0.436_DES16X1cpf$suffix2
+mv DES16X2crr$suffix1      0.312_DES16X2crr$suffix2
+mv DES16X3cry$suffix1      0.612_DES16X3cry$suffix2
+mv DES16X3zd$suffix1       0.495_DES16X3zd$suffix2
+
+
 
 #######################################################################
 #######################################################################
@@ -262,4 +304,4 @@ mv  PSc560054*.png  PScJ560054$suffix1.png
 
 #   Go back to the code directory
 
-cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Codes/github/RAISIN/utils/
+cd /Users/arturo/Dropbox/Research/Articulos/15_RAISINs/Codes/github/RAISIN/utils/
