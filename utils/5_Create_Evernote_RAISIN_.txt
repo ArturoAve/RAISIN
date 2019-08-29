@@ -1,0 +1,257 @@
+#       Applescript to create an Evernote note with plots and text
+# 
+# This Applescript was generated using a python script (see details below).
+# 
+# NOTE: Copy/paste the text of this file into a applescript ('.scpt') file.
+
+# AppleScript to automatically create an Evernote (EN) note with the RAISIN
+# fits and filters plots, ordered in ascending order based on z_CMB, and
+# writting a caption that will help to the collaborators to more easily
+# look for any particular RAISIN using the text-search tool of their
+# internet browsers while sharing the generated EN note.
+# 
+#       WATCH OUT! About attaching a file to a note in Evernote:
+# 
+# To attach a file (image, text file, PDF, etc) to a note, first it is
+# necessary to have previously opened and attached the file in any note in
+# Evernote! Otherwise, Evernote doesn’t attach the file when using the
+# AppleScript command. So, my procedure is:
+# 
+# 1. Disconnect for a moment the computer from the internet to prevent that
+# Evernote sync the temporary note that I’m going to create in the next
+# step.
+# 
+# 2. Create a temporary new note in EN and drag-and-drop on it all the
+# files (image, text file, PDF, etc) I want to attach. This will help to
+# Evernote recognize those files.
+# 
+# 3. Using AppleScript, create a new note in EN with the text, html and
+# attached files I want, and with sorted or organized based on my
+# preference. This note will be the definite one.
+# 
+# 4. Remove the temporary note created in step 2. Remove it also from the
+# Evernote Trash.
+# 
+# 5. Reconnect the computer to internet and sync, et voila.
+#---------------------------------------------------------60
+# Code created by: Arturo_Avelino.
+# On date: 2019.07.15 (yyyy.mm.dd); 18:54 hrs.
+# Script used: 4_Create_AppleScript_for_Evernote.ipynb (version 0.0.2 | last update: 2019.07.13)
+#---------------------------------------------------------60
+
+tell application "Evernote"
+
+    # Create the header of the Evernote:
+    set note1 to create note title "RAISIN-2: Optical (griz-bands) + NIR SNooPy fits, EBV2 model, Mangled kcorr (v 0.1.0)" with text "By Arturo Avelino" notebook "RAISIN"
+
+    # Add some text at the top of the note.
+    append note1 text "
+    "
+    append note1 text "Last actual update: 2019.07.15 (yyyy.mm.dd)
+    "
+
+    #=====================================================
+    # Attaching the plots and captions of each supernovae to the Evernote note.
+
+
+    #      DES16X2crr
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X2crr_PlotFitText.png"
+    append note1 text "
+    Fig 1a. DES16X2crr fit. z_helio = 0.312"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X2crr_Filters.png"
+    append note1 text "
+    Fig 1b. DES16X2crr filters match. z_helio = 0.312"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X2crr_PlotKcorrs.png"
+    append note1 text "
+    Fig 1c. DES16X2crr k-corrections. z_helio = 0.312"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES15E2nlz
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2nlz_PlotFitText.png"
+    append note1 text "
+    Fig 2a. DES15E2nlz fit. z_helio = 0.41"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2nlz_Filters.png"
+    append note1 text "
+    Fig 2b. DES15E2nlz filters match. z_helio = 0.41"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2nlz_PlotKcorrs.png"
+    append note1 text "
+    Fig 2c. DES15E2nlz k-corrections. z_helio = 0.41"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16X1cpf
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X1cpf_PlotFitText.png"
+    append note1 text "
+    Fig 3a. DES16X1cpf fit. z_helio = 0.436"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X1cpf_Filters.png"
+    append note1 text "
+    Fig 3b. DES16X1cpf filters match. z_helio = 0.436"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X1cpf_PlotKcorrs.png"
+    append note1 text "
+    Fig 3c. DES16X1cpf k-corrections. z_helio = 0.436"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES15E2mhy
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2mhy_PlotFitText.png"
+    append note1 text "
+    Fig 4a. DES15E2mhy fit. z_helio = 0.4391"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2mhy_Filters.png"
+    append note1 text "
+    Fig 4b. DES15E2mhy filters match. z_helio = 0.4391"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15E2mhy_PlotKcorrs.png"
+    append note1 text "
+    Fig 4c. DES15E2mhy k-corrections. z_helio = 0.4391"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES15X2nkz
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15X2nkz_PlotFitText.png"
+    append note1 text "
+    Fig 5a. DES15X2nkz fit. z_helio = 0.469"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15X2nkz_Filters.png"
+    append note1 text "
+    Fig 5b. DES15X2nkz filters match. z_helio = 0.469"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES15X2nkz_PlotKcorrs.png"
+    append note1 text "
+    Fig 5c. DES15X2nkz k-corrections. z_helio = 0.469"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16S1bno
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1bno_PlotFitText.png"
+    append note1 text "
+    Fig 6a. DES16S1bno fit. z_helio = 0.47"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1bno_Filters.png"
+    append note1 text "
+    Fig 6b. DES16S1bno filters match. z_helio = 0.47"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1bno_PlotKcorrs.png"
+    append note1 text "
+    Fig 6c. DES16S1bno k-corrections. z_helio = 0.47"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16E2rd
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16E2rd_PlotFitText.png"
+    append note1 text "
+    Fig 7a. DES16E2rd fit. z_helio = 0.494"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16E2rd_Filters.png"
+    append note1 text "
+    Fig 7b. DES16E2rd filters match. z_helio = 0.494"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16E2rd_PlotKcorrs.png"
+    append note1 text "
+    Fig 7c. DES16E2rd k-corrections. z_helio = 0.494"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16X3zd
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X3zd_PlotFitText.png"
+    append note1 text "
+    Fig 8a. DES16X3zd fit. z_helio = 0.495"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X3zd_Filters.png"
+    append note1 text "
+    Fig 8b. DES16X3zd filters match. z_helio = 0.495"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16X3zd_PlotKcorrs.png"
+    append note1 text "
+    Fig 8c. DES16X3zd k-corrections. z_helio = 0.495"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16S1agd
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1agd_PlotFitText.png"
+    append note1 text "
+    Fig 9a. DES16S1agd fit. z_helio = 0.504"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1agd_Filters.png"
+    append note1 text "
+    Fig 9b. DES16S1agd filters match. z_helio = 0.504"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16S1agd_PlotKcorrs.png"
+    append note1 text "
+    Fig 9c. DES16S1agd k-corrections. z_helio = 0.504"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+    #      DES16C1cim
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16C1cim_PlotFitText.png"
+    append note1 text "
+    Fig 10a. DES16C1cim fit. z_helio = 0.531"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16C1cim_Filters.png"
+    append note1 text "
+    Fig 10b. DES16C1cim filters match. z_helio = 0.531"
+    append note1 text "
+    "
+    append note1 attachment "/Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__v0_2_4/fits/EBV2/Mangled/Optical_NIR_g/DES16C1cim_PlotKcorrs.png"
+    append note1 text "
+    Fig 10c. DES16C1cim k-corrections. z_helio = 0.531"
+    append note1 text "
+____________________________________________________________
+
+
+    "
+
+end tell

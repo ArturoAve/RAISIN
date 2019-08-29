@@ -3,9 +3,9 @@
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
 # On date: 2018.12.26 (yyyy.mm.dd)
-export last_update='2019.06.12' # (yyyy.mm.dd)
-export version_code='0.1.5'
-export code_name='Rename_RAISIN_filenames.sh'
+export last_update='2019.07.09' # (yyyy.mm.dd)
+export version_code='0.1.6'
+export code_name='1_Rename_RAISIN_filenames.sh'
 #--------------------------------------------------------60
 #
 #   USE:
@@ -25,8 +25,8 @@ export code_name='Rename_RAISIN_filenames.sh'
 
 #       From David to standard name convention
 
-# Go to the directory where the data is located:
-# cd /Users/arturo/Downloads/tmp/raisin/raisin1
+## Go to the directory where the data is located:
+# cd /Users/arturo/Dropbox/Research/Articulos/18_RAISINs/Data/RAISIN_1/Data/data_2019_02_28
 #
 # ## The suffix of the kind of file:
 # export suffix1='_snoopy.dat'
@@ -93,12 +93,11 @@ export code_name='Rename_RAISIN_filenames.sh'
 # mv *PS1-J560054*.dat   PScJ560054$suffix1.dat
 
 #--------------------------------------------------------60
-#       From Pete to standard name convention
 
-# Change the SN name located INSIDE of the data file.
+#     Change the SN name located INSIDE of the data file
 
 ## Go to the directory where the data is located:
-cd /Users/arturo/Downloads/tmp/raisin/raisin1
+cd /Users/arturo/Dropbox/Research/Articulos/18_RAISINs/Data/RAISIN_1/Data/data_2019_02_28
 
 perl -pi -w -e 's/PSc440005/PScJ440005/g;' *.dat
 perl -pi -w -e 's/PSc440236/PScJ440236/g;' *.dat
@@ -160,34 +159,40 @@ perl -pi -w -e 's/PSc560054/PScJ560054/g;' *.dat
 
 #           DES (RAISIN-2)
 
-#  From DES to Pete's name convention.
+#  From DES to standard name convention.
 
 # Go to the directory where the data is located:
-# cd /Users/arturo/Downloads/raisin_tmp
+# cd /Users/arturo/Documents/Research/Workplace/raisin/raisin2/data/news/
 #
-# mv *1340454*.dat  DES15C1nhv.dat
-# mv *1343759*.dat  DES15C3odz.dat
-# mv *1336008*.dat  DES15E2mhy.dat
-# mv *1341370*.dat  DES15E2nlz.dat
-# mv *1285317*.dat  DES15E2uc.dat
-# mv *1329615*.dat  DES15X2kvt.dat
-# mv *1335564*.dat  DES15X2mey.dat
-# mv *1339149*.dat  DES15X2nkz.dat
-# mv *1490034*.dat  DES16C1cim.dat
-# mv *1513071*.dat  DES16C2cva.dat
-# mv *1504139*.dat  DES16C3cmy.dat
-# mv *1536028*.dat  DES16E1dcx.dat
-# mv *1500031*.dat  DES16E2clk.dat
-# mv *1516019*.dat  DES16E2cqq.dat
-# mv *1531089*.dat  DES16E2cxw.dat
-# mv *1376168*.dat  DES16E2rd.dat
-# mv *1389074*.dat  DES16S1agd.dat
-# mv *1430158*.dat  DES16S1bno.dat
-# mv *1387101*.dat  DES16S2afz.dat
-# mv *1501097*.dat  DES16X1cpf.dat
-# mv *1512114*.dat  DES16X2crr.dat
-# mv *1516088*.dat  DES16X3cry.dat
-# mv *1386047*.dat  DES16X3zd.dat
+# ## The suffix of the kind of file:
+# export suffix1='.dat'
+#
+# ## Define the suffix to append in the name file.
+# export suffix2='_snana.dat'
+#
+# mv *1340454*$suffix1  DES15C1nhv$suffix2
+# mv *1343759*$suffix1  DES15C3odz$suffix2
+# mv *1336008*$suffix1  DES15E2mhy$suffix2
+# mv *1341370*$suffix1  DES15E2nlz$suffix2
+# mv *1285317*$suffix1  DES15E2uc$suffix2
+# mv *1329615*$suffix1  DES15X2kvt$suffix2
+# mv *1335564*$suffix1  DES15X2mey$suffix2
+# mv *1339149*$suffix1  DES15X2nkz$suffix2
+# mv *1490034*$suffix1  DES16C1cim$suffix2
+# mv *1513071*$suffix1  DES16C2cva$suffix2
+# mv *1504139*$suffix1  DES16C3cmy$suffix2
+# mv *1536028*$suffix1  DES16E1dcx$suffix2
+# mv *1500031*$suffix1  DES16E2clk$suffix2
+# mv *1516019*$suffix1  DES16E2cqq$suffix2
+# mv *1531089*$suffix1  DES16E2cxw$suffix2
+# mv *1376168*$suffix1  DES16E2rd$suffix2
+# mv *1389074*$suffix1  DES16S1agd$suffix2
+# mv *1430158*$suffix1  DES16S1bno$suffix2
+# mv *1387101*$suffix1  DES16S2afz$suffix2
+# mv *1501097*$suffix1  DES16X1cpf$suffix2
+# mv *1512114*$suffix1  DES16X2crr$suffix2
+# mv *1516088*$suffix1  DES16X3cry$suffix2
+# mv *1386047*$suffix1  DES16X3zd$suffix2
 
 
 #--------------------------------------------------------60
@@ -226,32 +231,31 @@ perl -pi -w -e 's/PSc560054/PScJ560054/g;' *.dat
 # Change the SN name locates INSIDE of the file
 
 ## Go to the directory where the data is located:
-# cd /Users/arturo/Downloads/raisin_tmp
+# cd /Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__version_0_2_4/data/2_redshifts/
 #
-#
-# perl -pi -w -e 's/01340454/DES15C1nhv/g;' *.dat
-# perl -pi -w -e 's/01343759/DES15C3odz/g;' *.dat
-# perl -pi -w -e 's/01336008/DES15E2mhy/g;' *.dat
-# perl -pi -w -e 's/01341370/DES15E2nlz/g;' *.dat
-# perl -pi -w -e 's/01285317/DES15E2uc/g;'  *.dat
-# perl -pi -w -e 's/01329615/DES15X2kvt/g;' *.dat
-# perl -pi -w -e 's/01335564/DES15X2mey/g;' *.dat
-# perl -pi -w -e 's/01339149/DES15X2nkz/g;' *.dat
-# perl -pi -w -e 's/01490034/DES16C1cim/g;' *.dat
-# perl -pi -w -e 's/01513071/DES16C2cva/g;' *.dat
-# perl -pi -w -e 's/01504139/DES16C3cmy/g;' *.dat
-# perl -pi -w -e 's/01536028/DES16E1dcx/g;' *.dat
-# perl -pi -w -e 's/01500031/DES16E2clk/g;' *.dat
-# perl -pi -w -e 's/01516019/DES16E2cqq/g;' *.dat
-# perl -pi -w -e 's/01531089/DES16E2cxw/g;' *.dat
-# perl -pi -w -e 's/01376168/DES16E2rd/g;'  *.dat
-# perl -pi -w -e 's/01389074/DES16S1agd/g;' *.dat
-# perl -pi -w -e 's/01430158/DES16S1bno/g;' *.dat
-# perl -pi -w -e 's/01387101/DES16S2afz/g;' *.dat
-# perl -pi -w -e 's/01501097/DES16X1cpf/g;' *.dat
-# perl -pi -w -e 's/01512114/DES16X2crr/g;' *.dat
-# perl -pi -w -e 's/01516088/DES16X3cry/g;' *.dat
-# perl -pi -w -e 's/01386047/DES16X3zd/g;'  *.dat
+# perl -pi -w -e 's/1340454/DES15C1nhv/g;' *.dat
+# perl -pi -w -e 's/1343759/DES15C3odz/g;' *.dat
+# perl -pi -w -e 's/1336008/DES15E2mhy/g;' *.dat
+# perl -pi -w -e 's/1341370/DES15E2nlz/g;' *.dat
+# perl -pi -w -e 's/1285317/DES15E2uc/g;'  *.dat
+# perl -pi -w -e 's/1329615/DES15X2kvt/g;' *.dat
+# perl -pi -w -e 's/1335564/DES15X2mey/g;' *.dat
+# perl -pi -w -e 's/1339149/DES15X2nkz/g;' *.dat
+# perl -pi -w -e 's/1490034/DES16C1cim/g;' *.dat
+# perl -pi -w -e 's/1513071/DES16C2cva/g;' *.dat
+# perl -pi -w -e 's/1504139/DES16C3cmy/g;' *.dat
+# perl -pi -w -e 's/1536028/DES16E1dcx/g;' *.dat
+# perl -pi -w -e 's/1500031/DES16E2clk/g;' *.dat
+# perl -pi -w -e 's/1516019/DES16E2cqq/g;' *.dat
+# perl -pi -w -e 's/1531089/DES16E2cxw/g;' *.dat
+# perl -pi -w -e 's/1376168/DES16E2rd/g;'  *.dat
+# perl -pi -w -e 's/1389074/DES16S1agd/g;' *.dat
+# perl -pi -w -e 's/1430158/DES16S1bno/g;' *.dat
+# perl -pi -w -e 's/1387101/DES16S2afz/g;' *.dat
+# perl -pi -w -e 's/1501097/DES16X1cpf/g;' *.dat
+# perl -pi -w -e 's/1512114/DES16X2crr/g;' *.dat
+# perl -pi -w -e 's/1516088/DES16X3cry/g;' *.dat
+# perl -pi -w -e 's/1386047/DES16X3zd/g;'  *.dat
 
 # perl -pi -w -e 's/Crusher/SNABELL370/g;'  *.dat
 
@@ -339,4 +343,4 @@ perl -pi -w -e 's/PSc560054/PScJ560054/g;' *.dat
 
 #   Go back to the code directory
 
-cd /Users/arturo/Dropbox/Research/Articulos/15_RAISINs/Codes/github/RAISIN/utils/
+cd /Users/arturo/Dropbox/Research/Articulos/18_RAISINs/Codes/github/RAISIN/utils/

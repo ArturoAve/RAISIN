@@ -1,15 +1,15 @@
 #------ python -------------
 
-*.ipynb
+# *.ipynb
 *.html
 *.pyc
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
-/utils/*.ipynb
+
+# /utils/*.ipynb
 /utils/*.html
 
-00_Canopy_ToRunPythonScripts.py
-Plot_HubbleDiagram_Raisins.py
+Fit_with_Snoopy_Individual.ipynb
 
 #------- bash ------------
 

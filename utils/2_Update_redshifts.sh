@@ -1,27 +1,28 @@
 #
 #       UPDATE REDSHIFT VALUES IN SNANA OR SNOOPY LC FILES
 #
+# This script replace a given line (specified by the line number) by a new
+# new line with the indicated text.
+#
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
 # On date: 2019.02.01 (yyyy.mm.dd)
-export last_update='2019.02.05' # (yyyy.mm.dd)
-export version_code='0.1.1'
-export code_name='Update_redshifts.sh'
+export last_update='2019.07.009' # (yyyy.mm.dd)
+export version_code='0.1.2'
+export code_name='2_Update_redshifts.sh'
 #--------------------------------------------------------60
 #
 #   USE:
-#
-# First, define in the perl command lines the name of the file to be modified.
-# It can be also a bunch of files simultaneously using "*".
 #
 # Write down the path to the folder containing the files to be
 # modified and then in a terminal type:
 #
 #       $ source ThisScriptFilename.sh
 #
-#--------------------------------------------------------60
-#
-# I create the columns of redshifts by copy/pasting the redshift column
+# WATCH OUT:  Line number after the 'sed' word in the command line below MUST
+# be the one  of the row to replace.
+##
+# I created the columns of redshifts by copy/pasting the redshift column
 # from the "RAISIN_Metadata" Google spreadsheet.
 #
 #######################################################################
@@ -95,33 +96,76 @@ export code_name='Update_redshifts.sh'
 #
 #       SNANA FILES
 #
+# Last time I checked that the redshifts in the list below are the correct ones:
+# July 9, 2019
+
 ## Go to the directory where the data is located:
-cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Data/RAISIN_2/Data/DES/2017_11_20/data/3_redshift_Pete
+cd /Users/arturo/Documents/Research/Workplace/raisin/raisin2/2019_07_04__version_0_2_4/data/3_redshift
 
-sed '15s/.*/REDSHIFT_FINAL: 0.421   +- 0.0010 (CMB)/' DES15C1nhv*.dat > DES15C1nhv_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.508   +- 0.0010 (CMB)/' DES15C3odz*.dat > DES15C3odz_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.4391  +- 0.0010 (CMB)/' DES15E2mhy*.dat > DES15E2mhy_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.41    +- 0.0010 (CMB)/' DES15E2nlz*.dat > DES15E2nlz_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.566   +- 0.0010 (CMB)/' DES15E2uc*.dat  > DES15E2uc_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.404   +- 0.0010 (CMB)/' DES15X2kvt*.dat > DES15X2kvt_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.608   +- 0.0010 (CMB)/' DES15X2mey*.dat > DES15X2mey_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.469   +- 0.0010 (CMB)/' DES15X2nkz*.dat > DES15X2nkz_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.531   +- 0.0010 (CMB)/' DES16C1cim*.dat > DES16C1cim_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.403   +- 0.0010 (CMB)/' DES16C2cva*.dat > DES16C2cva_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.556   +- 0.0010 (CMB)/' DES16C3cmy*.dat > DES16C3cmy_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.453   +- 0.0010 (CMB)/' DES16E1dcx*.dat > DES16E1dcx_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.367   +- 0.0010 (CMB)/' DES16E2clk*.dat > DES16E2clk_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.426   +- 0.0010 (CMB)/' DES16E2cqq*.dat > DES16E2cqq_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.293   +- 0.0010 (CMB)/' DES16E2cxw*.dat > DES16E2cxw_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.494   +- 0.0010 (CMB)/' DES16E2rd*.dat  > DES16E2rd_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.504   +- 0.0010 (CMB)/' DES16S1agd*.dat > DES16S1agd_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.47    +- 0.0010 (CMB)/' DES16S1bno*.dat > DES16S1bno_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.483   +- 0.0010 (CMB)/' DES16S2afz*.dat > DES16S2afz_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.436   +- 0.0010 (CMB)/' DES16X1cpf*.dat > DES16X1cpf_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.312   +- 0.0010 (CMB)/' DES16X2crr*.dat > DES16X2crr_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.612   +- 0.0010 (CMB)/' DES16X3cry*.dat > DES16X3cry_snana_z.dat
-sed '15s/.*/REDSHIFT_FINAL: 0.495   +- 0.0010 (CMB)/' DES16X3zd*.dat  > DES16X3zd_snana_z.dat
+# ## The suffix of the kind of file:
+export suffix1='_snana.dat'
+#
+# ## Define the suffix to append in the name file.
+export suffix2='_snana_2.dat'
 
+## Options for the text to write down in the line to be replaced:
+## ('REDSHIFT_FINAL', 'REDSHIFT_HELIO')
+
+# WATCH OUT:  Line number after the 'sed' word in the command line below MUST
+# be the one  of the row to replace.
+
+sed '15s/.*/REDSHIFT_FINAL: 0.421   +- 0.0010 (CMB)/' DES15C1nhv$suffix1 > DES15C1nhv$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.508   +- 0.0010 (CMB)/' DES15C3odz$suffix1 > DES15C3odz$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.4391  +- 0.0010 (CMB)/' DES15E2mhy$suffix1 > DES15E2mhy$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.41    +- 0.0010 (CMB)/' DES15E2nlz$suffix1 > DES15E2nlz$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.566   +- 0.0010 (CMB)/' DES15E2uc$suffix1  > DES15E2uc$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.404   +- 0.0010 (CMB)/' DES15X2kvt$suffix1 > DES15X2kvt$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.608   +- 0.0010 (CMB)/' DES15X2mey$suffix1 > DES15X2mey$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.469   +- 0.0010 (CMB)/' DES15X2nkz$suffix1 > DES15X2nkz$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.531   +- 0.0010 (CMB)/' DES16C1cim$suffix1 > DES16C1cim$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.403   +- 0.0010 (CMB)/' DES16C2cva$suffix1 > DES16C2cva$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.556   +- 0.0010 (CMB)/' DES16C3cmy$suffix1 > DES16C3cmy$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.453   +- 0.0010 (CMB)/' DES16E1dcx$suffix1 > DES16E1dcx$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.367   +- 0.0010 (CMB)/' DES16E2clk$suffix1 > DES16E2clk$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.426   +- 0.0010 (CMB)/' DES16E2cqq$suffix1 > DES16E2cqq$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.293   +- 0.0010 (CMB)/' DES16E2cxw$suffix1 > DES16E2cxw$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.494   +- 0.0010 (CMB)/' DES16E2rd$suffix1  > DES16E2rd$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.504   +- 0.0010 (CMB)/' DES16S1agd$suffix1 > DES16S1agd$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.47    +- 0.0010 (CMB)/' DES16S1bno$suffix1 > DES16S1bno$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.483   +- 0.0010 (CMB)/' DES16S2afz$suffix1 > DES16S2afz$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.436   +- 0.0010 (CMB)/' DES16X1cpf$suffix1 > DES16X1cpf$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.312   +- 0.0010 (CMB)/' DES16X2crr$suffix1 > DES16X2crr$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.612   +- 0.0010 (CMB)/' DES16X3cry$suffix1 > DES16X3cry$suffix2
+sed '15s/.*/REDSHIFT_FINAL: 0.495   +- 0.0010 (CMB)/' DES16X3zd$suffix1  > DES16X3zd$suffix2
+
+
+#--------------------------------------------------------60
+
+#       try
+
+# sed '14s/.*/$zz_label: 0.421   +- 0.0010 ($zz_parenthesis)/' DES15C1nhv$suffix1 > DES15C1nhv$suffix2
+# sed '$line_nums/.*/$zz_label: 0.508   +- 0.0010 ($zz_parenthesis)/' DES15C3odz$suffix1 > DES15C3odz$suffix2
+# sed '$line_nums/.*/$zz_label: 0.4391  +- 0.0010 ($zz_parenthesis)/' DES15E2mhy$suffix1 > DES15E2mhy$suffix2
+# sed '$line_nums/.*/$zz_label: 0.41    +- 0.0010 ($zz_parenthesis)/' DES15E2nlz$suffix1 > DES15E2nlz$suffix2
+# sed '$line_nums/.*/$zz_label: 0.566   +- 0.0010 ($zz_parenthesis)/' DES15E2uc$suffix1  > DES15E2uc$suffix2
+# sed '$line_nums/.*/$zz_label: 0.404   +- 0.0010 ($zz_parenthesis)/' DES15X2kvt$suffix1 > DES15X2kvt$suffix2
+# sed '$line_nums/.*/$zz_label: 0.608   +- 0.0010 ($zz_parenthesis)/' DES15X2mey$suffix1 > DES15X2mey$suffix2
+# sed '$line_nums/.*/$zz_label: 0.469   +- 0.0010 ($zz_parenthesis)/' DES15X2nkz$suffix1 > DES15X2nkz$suffix2
+# sed '$line_nums/.*/$zz_label: 0.531   +- 0.0010 ($zz_parenthesis)/' DES16C1cim$suffix1 > DES16C1cim$suffix2
+# sed '$line_nums/.*/$zz_label: 0.403   +- 0.0010 ($zz_parenthesis)/' DES16C2cva$suffix1 > DES16C2cva$suffix2
+# sed '$line_nums/.*/$zz_label: 0.556   +- 0.0010 ($zz_parenthesis)/' DES16C3cmy$suffix1 > DES16C3cmy$suffix2
+# sed '$line_nums/.*/$zz_label: 0.453   +- 0.0010 ($zz_parenthesis)/' DES16E1dcx$suffix1 > DES16E1dcx$suffix2
+# sed '$line_nums/.*/$zz_label: 0.367   +- 0.0010 ($zz_parenthesis)/' DES16E2clk$suffix1 > DES16E2clk$suffix2
+# sed '$line_nums/.*/$zz_label: 0.426   +- 0.0010 ($zz_parenthesis)/' DES16E2cqq$suffix1 > DES16E2cqq$suffix2
+# sed '$line_nums/.*/$zz_label: 0.293   +- 0.0010 ($zz_parenthesis)/' DES16E2cxw$suffix1 > DES16E2cxw$suffix2
+# sed '$line_nums/.*/$zz_label: 0.494   +- 0.0010 ($zz_parenthesis)/' DES16E2rd$suffix1  > DES16E2rd$suffix2
+# sed '$line_nums/.*/$zz_label: 0.504   +- 0.0010 ($zz_parenthesis)/' DES16S1agd$suffix1 > DES16S1agd$suffix2
+# sed '$line_nums/.*/$zz_label: 0.47    +- 0.0010 ($zz_parenthesis)/' DES16S1bno$suffix1 > DES16S1bno$suffix2
+# sed '$line_nums/.*/$zz_label: 0.483   +- 0.0010 ($zz_parenthesis)/' DES16S2afz$suffix1 > DES16S2afz$suffix2
+# sed '$line_nums/.*/$zz_label: 0.436   +- 0.0010 ($zz_parenthesis)/' DES16X1cpf$suffix1 > DES16X1cpf$suffix2
+# sed '$line_nums/.*/$zz_label: 0.312   +- 0.0010 ($zz_parenthesis)/' DES16X2crr$suffix1 > DES16X2crr$suffix2
+# sed '$line_nums/.*/$zz_label: 0.612   +- 0.0010 ($zz_parenthesis)/' DES16X3cry$suffix1 > DES16X3cry$suffix2
+# sed '$line_nums/.*/$zz_label: 0.495   +- 0.0010 ($zz_parenthesis)/' DES16X3zd$suffix1  > DES16X3zd$suffix2
 
 #--------------------------------------------------------60
 
@@ -159,4 +203,4 @@ sed '15s/.*/REDSHIFT_FINAL: 0.495   +- 0.0010 (CMB)/' DES16X3zd*.dat  > DES16X3z
 #######################################################################
 
 # Return where this script is located
-cd /Users/arturo/Dropbox/Research/Articulos/14_RAISINs/Codes/github/RAISIN/utils/
+cd /Users/arturo/Dropbox/Research/Articulos/18_RAISINs/Codes/github/RAISIN/utils/
