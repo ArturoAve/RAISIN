@@ -3,8 +3,8 @@
 #--------------------------------------------------------60
 export code_created_by='Arturo_Avelino'
 # On date: 2018.12.26 (yyyy.mm.dd)
-export last_update='2019.07.09' # (yyyy.mm.dd)
-export version_code='0.1.6'
+export code_last_update='2019.07.09' # (yyyy.mm.dd)
+export code_version_code='0.1.6'
 export code_name='1_Rename_RAISIN_filenames.sh'
 #--------------------------------------------------------60
 #
@@ -339,8 +339,6 @@ perl -pi -w -e 's/PSc560054/PScJ560054/g;' *.dat
 
 #######################################################################
 #######################################################################
-
-
 #   Go back to the code directory
 
 cd /Users/arturo/Dropbox/Research/Articulos/18_RAISINs/Codes/github/RAISIN/utils/
